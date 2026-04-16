@@ -169,6 +169,27 @@
             color: #0a0a0a;
         }
 
+        .cv-lang-btn {
+            padding: 0.5rem 0.75rem;
+            background-color: transparent;
+            border: 1px solid #ff4d4d;
+            color: #e5e5e5;
+            cursor: pointer;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .cv-lang-btn.active {
+            background-color: #ff4d4d;
+            color: #0a0a0a;
+        }
+
+        .cv-lang-btn:hover {
+            background-color: #ff4d4d;
+            color: #0a0a0a;
+        }
+
         /* Secciones */
         section {
             padding: 6rem 0;
@@ -1102,6 +1123,21 @@
             <h2 class="section-title" data-es="Currículum" data-en="Resume" data-ca="Currículum">Currículum</h2>
             <p class="section-subtitle" data-es="Descarga mi CV en tu idioma preferido" data-en="Download my CV in your preferred language" data-ca="Descarrega el meu CV en el teu idioma preferit">Descarga mi CV en tu idioma preferido</p>
             
+            <!-- Selector de Idioma y Botones de Descarga -->
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <div style="margin-bottom: 1.5rem;">
+                    <p style="color: #999; margin-bottom: 1rem; font-size: 0.95rem;" data-es="Selecciona un idioma:" data-en="Select a language:" data-ca="Selecciona un idioma:">Selecciona un idioma:</p>
+                    <div class="language-switcher" style="justify-content: center; gap: 1rem;">
+                        <button class="cv-lang-btn active" data-cv-lang="es" data-es="Español" data-en="Spanish" data-ca="Espanyol">Español</button>
+                        <button class="cv-lang-btn" data-cv-lang="en" data-es="Inglés" data-en="English" data-ca="Anglès">Inglés</button>
+                        <button class="cv-lang-btn" data-cv-lang="ca" data-es="Catalán" data-en="Catalan" data-ca="Català">Catalán</button>
+                    </div>
+                </div>
+                <div>
+                    <a href="#" id="cv-download-btn" class="btn btn-primary" style="display: inline-block;" data-es="⬇️ Descargar CV" data-en="⬇️ Download CV" data-ca="⬇️ Descarregar CV">⬇️ Descargar CV</a>
+                </div>
+            </div>
+            
             <div class="cv-container">
                 <!-- Sección Información Personal -->
                 <div class="cv-section">
@@ -1321,6 +1357,33 @@
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
+        });
+
+        // Sistema de descarga de CV
+        let cvLanguage = 'es';
+
+        document.querySelectorAll('.cv-lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.cv-lang-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                cvLanguage = this.dataset.cvLang;
+            });
+        });
+
+        document.getElementById('cv-download-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const cvFiles = {
+                'es': 'CV_Ivan_Gutierrez_ES.pdf',
+                'en': 'CV_Ivan_Gutierrez_EN.pdf',
+                'ca': 'CV_Ivan_Gutierrez_CA.pdf'
+            };
+            const fileName = cvFiles[cvLanguage];
+            const link = document.createElement('a');
+            link.href = fileName;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         });
     </script>
 </body>
