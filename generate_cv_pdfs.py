@@ -365,19 +365,7 @@ def generate_cv_pdf(language='es'):
     ))
     elements.append(hobbies)
     
-    # Pie de página
-    elements.append(Spacer(1, 0.2*inch))
-    footer = Paragraph(
-        f"<i>Generado el {datetime.now().strftime('%d/%m/%Y')}</i>",
-        ParagraphStyle(
-            'Footer',
-            parent=styles['Normal'],
-            fontSize=8,
-            textColor=COLOR_GRAY,
-            alignment=TA_CENTER
-        )
-    )
-    elements.append(footer)
+    # Pie de página (vacío - sin fecha de generación)
     
     # Construir PDF
     doc.build(elements)

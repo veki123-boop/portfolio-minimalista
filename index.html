@@ -1031,7 +1031,7 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image">💻</div>
+                    <div class="project-image"><img src="vms.png" alt="Máquinas Virtuales"></div>
                     <div class="project-content">
                         <h3 class="project-title" data-es="Máquinas Virtuales" data-en="Virtual Machines" data-ca="Màquines Virtuals">Máquinas Virtuales</h3>
                         <p class="project-description" data-es="Configuración y administración de máquinas virtuales con VMware y VirtualBox. Instalación de sistemas operativos y optimización de recursos." data-en="Configuration and management of virtual machines with VMware and VirtualBox. Operating system installation and resource optimization." data-ca="Configuració i administració de màquines virtuals amb VMware i VirtualBox. Instal·lació de sistemes operatius i optimització de recursos.">Configuración y administración de máquinas virtuales con VMware y VirtualBox. Instalación de sistemas operativos y optimización de recursos.</p>
@@ -1247,22 +1247,6 @@
             <p class="section-subtitle" data-es="¿Tienes un proyecto en mente? Hablemos" data-en="Do you have a project in mind? Let's talk" data-ca="Tens un projecte en ment? Parlem">¿Tienes un proyecto en mente? Hablemos</p>
             
             <div class="contact-container">
-                <form action="https://formspree.io/f/xyzpqwer" method="POST">
-                    <div class="form-group">
-                        <label for="name" data-es="Nombre" data-en="Name" data-ca="Nom">Nombre</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" data-es="Email" data-en="Email" data-ca="Email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" data-es="Mensaje" data-en="Message" data-ca="Missatge">Mensaje</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;" data-es="Enviar Mensaje" data-en="Send Message" data-ca="Enviar Missatge">Enviar Mensaje</button>
-                </form>
-
                 <div class="contact-links">
                     <a href="mailto:ciruelomayka@gmail.com" class="contact-link">
                         <div class="contact-link-icon">✉️</div>
@@ -1278,6 +1262,11 @@
                         <div class="contact-link-icon">📱</div>
                         <div class="contact-link-label" data-es="Teléfono" data-en="Phone" data-ca="Telèfon">Teléfono</div>
                         <div style="font-size: 0.85rem; color: #ff4d4d;">+34 635 074 516</div>
+                    </a>
+                    <a href="https://discord.com/users/738432" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <div class="contact-link-icon">💜</div>
+                        <div class="contact-link-label">Discord</div>
+                        <div style="font-size: 0.85rem; color: #ff4d4d;">738432</div>
                     </a>
                 </div>
             </div>
@@ -1367,6 +1356,19 @@
                 document.querySelectorAll('.cv-lang-btn').forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
                 cvLanguage = this.dataset.cvLang;
+                
+                // Cambiar solo el contenido del CV
+                const cvSection = document.getElementById('cv');
+                cvSection.querySelectorAll('[data-es]').forEach(element => {
+                    const text = element.dataset[cvLanguage];
+                    if (text) {
+                        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                            element.placeholder = text;
+                        } else {
+                            element.textContent = text;
+                        }
+                    }
+                });
             });
         });
 
