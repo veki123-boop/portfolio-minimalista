@@ -1,11 +1,12 @@
 /**
  * NAVIGATION COMPONENT - Portfolio Minimalista
  * 
- * Barra de navegación minimalista con logo y enlaces
+ * Barra de navegación minimalista con logo, enlaces y selector de idioma
  */
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +17,7 @@ export default function Navigation() {
     { label: "Proyectos", href: "#projects" },
     { label: "Experiencia", href: "#experience" },
     { label: "Contacto", href: "#contact" },
+    { label: "CV", href: "#cv" },
   ];
 
   return (
@@ -24,10 +26,10 @@ export default function Navigation() {
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
           <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
-            <span className="text-background font-bold">JG</span>
+            <span className="text-background font-bold">IG</span>
           </div>
           <span className="hidden sm:inline text-foreground font-semibold">
-            Juan García
+            Iván Gutierrez
           </span>
         </a>
 
@@ -42,6 +44,9 @@ export default function Navigation() {
               {item.label}
             </a>
           ))}
+          <div className="border-l border-muted pl-8">
+            <LanguageSwitcher />
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -72,6 +77,9 @@ export default function Navigation() {
                 {item.label}
               </a>
             ))}
+            <div className="pt-4 border-t border-muted">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       )}

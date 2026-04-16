@@ -15,18 +15,17 @@ export default function Hero() {
         <div className="max-w-2xl">
           {/* Nombre Principal */}
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Juan <span className="text-accent">García</span>
+            Iván <span className="text-accent">Gutierrez</span>
           </h1>
 
           {/* Rol */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-medium">
-            Full Stack Developer & Designer
+            Técnico en Sistemas & Desarrollador
           </p>
 
           {/* Descripción Corta */}
           <p className="text-lg text-muted-foreground mb-12 max-w-xl leading-relaxed">
-            Creo experiencias digitales minimalistas y de alto rendimiento. Especializado en
-            React, Next.js y diseño de interfaces limpias.
+            Apasionado por la tecnología, administración de sistemas y desarrollo. Especializado en configuración de servidores, máquinas virtuales y creación de soluciones web innovadoras.
           </p>
 
           {/* CTAs */}
@@ -43,7 +42,7 @@ export default function Hero() {
           {/* Social Links */}
           <div className="flex gap-6">
             <a
-              href="https://github.com"
+              href="https://github.com/veki123-boop"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-accent transition-colors duration-200"
@@ -61,7 +60,7 @@ export default function Hero() {
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="mailto:contact@example.com"
+              href="mailto:ciruelomayka@gmail.com"
               className="text-muted-foreground hover:text-accent transition-colors duration-200"
               aria-label="Email"
             >

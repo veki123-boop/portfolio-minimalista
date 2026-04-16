@@ -1,8 +1,7 @@
 /**
  * PROJECTS SECTION - Portfolio Minimalista
  * 
- * Sección de proyectos con cards reutilizables
- * Datos manejados desde projects.ts para fácil extensión
+ * Sección de proyectos destacados
  */
 
 import { projects } from "@/data/projects";
@@ -13,95 +12,77 @@ import ScrollReveal from "./ScrollReveal";
 import { Github, ExternalLink } from "lucide-react";
 
 export default function Projects() {
-  const featuredProjects = projects.filter((p) => p.featured).slice(0, 3);
-
   return (
-    <section className="section">
+    <section className="section" id="projects">
       <div className="container">
         <ScrollReveal>
           <SectionTitle
             title="Proyectos Destacados"
-            subtitle="Una selección de mis trabajos más recientes"
+            subtitle="Mis trabajos más recientes y relevantes"
           />
         </ScrollReveal>
 
         <ScrollReveal delay={100}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredProjects.map((project) => (
-            <Card key={project.id} hover className="flex flex-col h-full">
-              {/* Imagen del Proyecto */}
-              <div className="mb-6 -mx-6 -mt-6">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover rounded-t-lg"
-                />
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {projects.filter(p => p.featured).map((project: any) => (
+              <Card key={project.id} hover className="overflow-hidden">
+                {/* Project Image */}
+                {project.image && (
+                  <div className="w-full h-48 bg-muted mb-6 rounded-lg overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
 
-              {/* Contenido */}
-              <div className="flex-1 flex flex-col">
-                <h3 className="text-xl font-semibold text-foreground mb-2">
-                  {project.title}
+                {/* Project Info */}
+                <h3 className="text-2xl font-semibold text-foreground mb-3">
+                  {project.titleEs}
                 </h3>
 
-                <p className="text-muted-foreground mb-4 flex-1">
-                  {project.description}
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  {project.descriptionEs}
                 </p>
 
-                {/* Tecnologías */}
-                <div className="mb-6 flex flex-wrap gap-2">
-                  {project.technologies.slice(0, 3).map((tech) => (
-                    <Badge key={tech} text={tech} variant="muted" />
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.technologies.map((tech: string) => (
+                    <Badge key={tech} text={tech} variant="accent" />
                   ))}
-                  {project.technologies.length > 3 && (
-                    <Badge
-                      text={`+${project.technologies.length - 3}`}
-                      variant="muted"
-                    />
-                  )}
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-3 pt-4 border-t border-muted">
-                  {project.links.github && (
+                <div className="flex gap-3">
+                  {project.links?.github && (
                     <a
                       href={project.links.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors duration-200"
+                      className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors duration-200 font-medium text-sm"
                     >
                       <Github className="w-4 h-4" />
-                      <span className="text-sm">Código</span>
+                      GitHub
                     </a>
                   )}
-                  {project.links.demo && (
+
+                  {project.links?.demo && (
                     <a
                       href={project.links.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors duration-200"
+                      className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors duration-200 font-medium text-sm"
                     >
                       <ExternalLink className="w-4 h-4" />
-                      <span className="text-sm">Demo</span>
+                      Demo
                     </a>
                   )}
                 </div>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            ))}
           </div>
         </ScrollReveal>
-
-        {/* Ver Todos los Proyectos */}
-        <div className="mt-16 text-center">
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 text-accent hover:text-red-600 font-medium transition-colors duration-200"
-          >
-            Ver todos los proyectos
-            <ExternalLink className="w-4 h-4" />
-          </a>
-        </div>
       </div>
     </section>
   );

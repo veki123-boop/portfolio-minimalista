@@ -1,32 +1,23 @@
 /**
- * PROJECTS DATA - Portfolio Minimalista
+ * PROJECTS DATA - Portfolio Iván Gutierrez
  * 
  * Estructura modular para gestionar proyectos fácilmente.
  * Simplemente añade nuevos objetos al array para agregar proyectos.
- * 
- * Campos:
- * - id: Identificador único (string)
- * - title: Título del proyecto
- * - description: Descripción breve
- * - longDescription: Descripción más detallada (opcional)
- * - image: URL de la imagen del proyecto
- * - technologies: Array de tecnologías usadas
- * - links: Enlaces a GitHub y demo
- * - featured: Boolean para destacar en la página
- * - year: Año de creación
  */
 
 export interface Project {
   id: string;
-  title: string;
-  description: string;
-  longDescription?: string;
+  titleEs: string;
+  titleEn: string;
+  titleCa: string;
+  descriptionEs: string;
+  descriptionEn: string;
+  descriptionCa: string;
   image: string;
   technologies: string[];
   links: {
     github?: string;
     demo?: string;
-    website?: string;
   };
   featured?: boolean;
   year: number;
@@ -34,82 +25,80 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "project-1",
-    title: "E-commerce Platform",
-    description: "Plataforma de comercio electrónico moderna con carrito de compras, pagos integrados y panel de administración.",
-    longDescription: "Plataforma completa de e-commerce construida con Next.js, incluye autenticación de usuarios, gestión de productos, carrito de compras, integración de pagos con Stripe y panel administrativo para gestionar inventario.",
-    image: "https://images.unsplash.com/photo-1460925895917-adf4e565db18?w=800&h=500&fit=crop",
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Stripe", "PostgreSQL"],
+    id: "minecraft-servers",
+    titleEs: "Administración de Servidores Minecraft",
+    titleEn: "Minecraft Server Administration",
+    titleCa: "Administració de Servidors Minecraft",
+    descriptionEs:
+      "Configuración completa de servidores Minecraft con plugins, mods, backups automáticos y gestión remota por SFTP.",
+    descriptionEn:
+      "Complete Minecraft server configuration with plugins, mods, automatic backups and remote management via SFTP.",
+    descriptionCa:
+      "Configuració completa de servidors Minecraft amb plugins, mods, còpies de seguretat automàtiques i gestió remota per SFTP.",
+    image: "https://images.unsplash.com/photo-1538481143235-5d630a3663d4?w=600&h=400&fit=crop",
+    technologies: ["Minecraft", "SFTP", "Linux", "Bash"],
     links: {
-      github: "https://github.com",
-      demo: "https://example.com",
+      github: "https://github.com/veki123-boop",
     },
     featured: true,
     year: 2024,
   },
   {
-    id: "project-2",
-    title: "Task Management App",
-    description: "Aplicación de gestión de tareas colaborativa con tiempo real y notificaciones.",
-    longDescription: "App de gestión de tareas con soporte para equipos, asignación de tareas, seguimiento de progreso y notificaciones en tiempo real usando WebSockets.",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
+    id: "virtual-machines",
+    titleEs: "Máquinas Virtuales",
+    titleEn: "Virtual Machines",
+    titleCa: "Màquines Virtuals",
+    descriptionEs:
+      "Configuración y administración de máquinas virtuales usando VMware y VirtualBox. Instalación de sistemas operativos y optimización.",
+    descriptionEn:
+      "Configuration and management of virtual machines using VMware and VirtualBox. Operating system installation and optimization.",
+    descriptionCa:
+      "Configuració i administració de màquines virtuals usant VMware i VirtualBox. Instal·lació de sistemes operatius i optimització.",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+    technologies: ["VMware", "VirtualBox", "Linux", "Windows"],
     links: {
-      github: "https://github.com",
-      demo: "https://example.com",
+      github: "https://github.com/veki123-boop",
     },
     featured: true,
-    year: 2023,
-  },
-  {
-    id: "project-3",
-    title: "Analytics Dashboard",
-    description: "Dashboard de análisis con gráficos interactivos y reportes en tiempo real.",
-    longDescription: "Dashboard profesional para visualizar datos con gráficos interactivos, filtros avanzados y exportación de reportes en múltiples formatos.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-    technologies: ["React", "D3.js", "TypeScript", "Tailwind CSS", "API REST"],
-    links: {
-      github: "https://github.com",
-      demo: "https://example.com",
-    },
-    featured: true,
-    year: 2023,
-  },
-  {
-    id: "project-4",
-    title: "Mobile App - Fitness Tracker",
-    description: "Aplicación móvil para seguimiento de fitness con sincronización en la nube.",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop",
-    technologies: ["React Native", "Firebase", "JavaScript", "Expo"],
-    links: {
-      github: "https://github.com",
-      demo: "https://example.com",
-    },
-    year: 2022,
-  },
-  {
-    id: "project-5",
-    title: "AI Content Generator",
-    description: "Herramienta para generar contenido usando inteligencia artificial.",
-    image: "https://images.unsplash.com/photo-1677442d019cecf8d07695dac4b2aaf28c84df31?w=800&h=500&fit=crop",
-    technologies: ["Next.js", "OpenAI API", "TypeScript", "Tailwind CSS"],
-    links: {
-      github: "https://github.com",
-      demo: "https://example.com",
-    },
     year: 2024,
   },
   {
-    id: "project-6",
-    title: "Social Media Analytics",
-    description: "Plataforma para analizar y optimizar presencia en redes sociales.",
-    image: "https://images.unsplash.com/photo-1611925591563-430f63602796?w=800&h=500&fit=crop",
-    technologies: ["React", "Python", "Django", "PostgreSQL", "Celery"],
+    id: "web-creator-ai",
+    titleEs: "Creador de Páginas Web con IA",
+    titleEn: "Web Pages Creator with AI",
+    titleCa: "Creador de Pàgines Web amb IA",
+    descriptionEs:
+      "Desarrollo de páginas web utilizando inteligencia artificial para optimizar diseño y funcionalidad. Generación automática de contenido HTML.",
+    descriptionEn:
+      "Web page development using artificial intelligence to optimize design and functionality. Automatic HTML content generation.",
+    descriptionCa:
+      "Desenvolupament de pàgines web usant intel·ligència artificial per optimitzar disseny i funcionalitat. Generació automàtica de contingut HTML.",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop",
+    technologies: ["HTML", "CSS", "JavaScript", "AI"],
     links: {
-      github: "https://github.com",
-      demo: "https://example.com",
+      github: "https://github.com/veki123-boop",
     },
-    year: 2023,
+    featured: true,
+    year: 2024,
+  },
+  {
+    id: "cpp-scripts",
+    titleEs: "Scripts y Herramientas en C++",
+    titleEn: "Scripts and Tools in C++",
+    titleCa: "Scripts i Eines en C++",
+    descriptionEs:
+      "Desarrollo de scripts y herramientas en C++ para detección de elementos y automatización de acciones. Programas eficientes y optimizados.",
+    descriptionEn:
+      "Development of scripts and tools in C++ for element detection and action automation. Efficient and optimized programs.",
+    descriptionCa:
+      "Desenvolupament de scripts i eines en C++ per a detecció d'elements i automatització d'accions. Programes eficients i optimitzats.",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop",
+    technologies: ["C++", "Programación", "Automatización"],
+    links: {
+      github: "https://github.com/veki123-boop",
+    },
+    featured: true,
+    year: 2024,
   },
 ];
 

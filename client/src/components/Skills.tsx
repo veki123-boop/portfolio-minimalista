@@ -12,7 +12,7 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function Skills() {
   return (
-    <section className="section bg-secondary/30">
+    <section className="section bg-secondary/30" id="skills">
       <div className="container">
         <ScrollReveal>
           <SectionTitle
@@ -24,51 +24,36 @@ export default function Skills() {
 
         <ScrollReveal delay={100}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {skillsData.map((category) => (
-            <Card key={category.id} hover={false} className="h-full">
-              <h3 className="text-xl font-semibold text-foreground mb-6">
-                {category.category}
-              </h3>
+            {skillsData.map((category) => (
+              <Card key={category.id} hover={false} className="h-full">
+                <h3 className="text-xl font-semibold text-foreground mb-6">
+                  {category.category}
+                </h3>
 
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <Badge
-                    key={skill.name}
-                    text={skill.name}
-                    variant={
-                      skill.level === "expert"
-                        ? "accent"
-                        : skill.level === "advanced"
-                          ? "default"
-                          : "muted"
-                    }
-                  />
-                ))}
-              </div>
-
-              {/* Skill Level Indicator */}
-              <div className="mt-6 pt-6 border-t border-muted space-y-2">
-                <div className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">Experto</span>
-                  <span className="text-accent font-semibold">
-                    {
-                      category.skills.filter((s) => s.level === "expert")
-                        .length
-                    }
-                  </span>
+                <div className="space-y-4">
+                  {category.skills.map((skill, idx) => (
+                    <div key={idx}>
+                      <p className="text-sm text-muted-foreground mb-2">
+                        {skill.name}
+                      </p>
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div
+                          className="bg-accent h-2 rounded-full"
+                          style={{
+                            width:
+                              skill.level === "expert"
+                                ? "100%"
+                                : skill.level === "advanced"
+                                  ? "85%"
+                                  : "70%",
+                          }}
+                        ></div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">Avanzado</span>
-                  <span className="text-accent font-semibold">
-                    {
-                      category.skills.filter((s) => s.level === "advanced")
-                        .length
-                    }
-                  </span>
-                </div>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            ))}
           </div>
         </ScrollReveal>
       </div>

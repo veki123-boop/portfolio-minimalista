@@ -15,18 +15,18 @@ export default function About() {
     "TypeScript",
     "Tailwind CSS",
     "Node.js",
-    "PostgreSQL",
-    "Docker",
-    "AWS",
+    "C++",
+    "VMware",
+    "Linux",
   ];
 
   return (
-    <section className="section">
+    <section className="section" id="about">
       <div className="container">
         <ScrollReveal>
           <SectionTitle
             title="Sobre Mí"
-            subtitle="Desarrollador apasionado por crear soluciones elegantes y escalables"
+            subtitle="Técnico motivado con pasión por la tecnología"
           />
         </ScrollReveal>
 
@@ -35,20 +35,15 @@ export default function About() {
             {/* Descripción */}
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Tengo más de 5 años de experiencia desarrollando aplicaciones web modernas.
-                Me especializo en crear interfaces limpias y funcionales que ofrecen
-                excelentes experiencias de usuario.
+                Tengo 17 años y estoy muy motivado para aprender y crecer en el campo de la tecnología. Me interesan especialmente áreas como la programación, la inteligencia artificial y los sistemas informáticos.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Mi enfoque se centra en escribir código limpio, mantenible y escalable.
-                Creo en la importancia del diseño minimalista y la optimización del
-                rendimiento en cada proyecto.
+                Me apasiona comprender cómo funciona la tecnología. Todo lo que tenga que ver con aprender de cosas con tecnología me parece interesante. Actualmente estoy cursando el Grado Medio en Sistemas Microinformáticos y Redes.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Cuando no estoy codificando, disfruto contribuyendo a proyectos open source,
-                escribiendo sobre desarrollo web y explorando nuevas tecnologías.
+                En mis tiempos libres dedico parte de mi tiempo a seguir aprendiendo y mejorando mis conocimientos en el ámbito de la tecnología.
               </p>
             </div>
 
@@ -67,18 +62,18 @@ export default function About() {
               {/* Stats */}
               <div className="mt-12 space-y-6">
                 <div>
-                  <p className="text-4xl font-bold text-accent mb-2">50+</p>
-                  <p className="text-muted-foreground">Proyectos Completados</p>
+                  <p className="text-4xl font-bold text-accent mb-2">4</p>
+                  <p className="text-muted-foreground">Proyectos Personales</p>
                 </div>
 
                 <div>
-                  <p className="text-4xl font-bold text-accent mb-2">30+</p>
-                  <p className="text-muted-foreground">Clientes Satisfechos</p>
+                  <p className="text-4xl font-bold text-accent mb-2">1</p>
+                  <p className="text-muted-foreground">En Desarrollo</p>
                 </div>
 
                 <div>
-                  <p className="text-4xl font-bold text-accent mb-2">5+</p>
-                  <p className="text-muted-foreground">Años de Experiencia</p>
+                  <p className="text-4xl font-bold text-accent mb-2">17</p>
+                  <p className="text-muted-foreground">Años</p>
                 </div>
               </div>
             </div>
