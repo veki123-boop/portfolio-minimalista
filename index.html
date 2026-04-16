@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- Seguridad -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data:; connect-src 'self' https://formspree.io; frame-ancestors 'none'; base-uri 'self'; form-action 'https://formspree.io';">
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -14,8 +14,8 @@
     
     <!-- SEO -->
     <title>Iván Gutierrez - Portfolio Minimalista</title>
-    <meta name="description" content="Portfolio personal de Iván Gutierrez. Técnico en Sistemas, Desarrollador Full Stack especializado en administración de servidores, máquinas virtuales y desarrollo web.">
-    <meta name="keywords" content="Iván Gutierrez, Portfolio, Desarrollador, Técnico Sistemas, Administración Servidores, Minecraft, Máquinas Virtuales">
+    <meta name="description" content="Portfolio personal de Iván Gutierrez. Técnico en Sistemas especializado en administración de servidores, máquinas virtuales y desarrollo web.">
+    <meta name="keywords" content="Iván Gutierrez, Portfolio, Técnico Sistemas, Administración Servidores, Minecraft, Máquinas Virtuales">
     <meta name="author" content="Iván Gutierrez Romero">
     <meta name="theme-color" content="#0a0a0a">
     <meta name="color-scheme" content="dark">
@@ -23,7 +23,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Iván Gutierrez - Portfolio Minimalista">
-    <meta property="og:description" content="Técnico en Sistemas & Desarrollador Full Stack">
+    <meta property="og:description" content="Técnico en Sistemas & Desarrollador">
     <meta property="og:url" content="https://portfolio-minimalista.manus.space">
     
     <!-- Preconexiones -->
@@ -470,6 +470,13 @@
             justify-content: center;
             color: #ff4d4d;
             font-size: 3rem;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .project-content {
@@ -564,6 +571,79 @@
         .experience-description {
             color: #b3b3b3;
             line-height: 1.6;
+        }
+
+        /* Sección CV */
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(255, 77, 77, 0.05);
+            border: 1px solid rgba(255, 77, 77, 0.2);
+            border-radius: 12px;
+            padding: 3rem;
+            margin-top: 3rem;
+        }
+
+        .cv-section {
+            margin-bottom: 2rem;
+        }
+
+        .cv-section h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ff4d4d;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid rgba(255, 77, 77, 0.3);
+            padding-bottom: 0.5rem;
+        }
+
+        .cv-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .cv-item-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .cv-item-subtitle {
+            color: #ff4d4d;
+            font-size: 0.95rem;
+            margin-top: 0.25rem;
+        }
+
+        .cv-item-date {
+            color: #999;
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+
+        .cv-item-description {
+            color: #b3b3b3;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-top: 0.5rem;
+        }
+
+        .cv-list {
+            list-style: none;
+            color: #b3b3b3;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .cv-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .cv-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #ff4d4d;
         }
 
         /* Sección Contact */
@@ -692,6 +772,10 @@
             .nav-links {
                 display: none;
             }
+
+            .cv-container {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -706,6 +790,7 @@
                     <li><a href="#sobre" data-es="Sobre Mí" data-en="About" data-ca="Sobre Mi">Sobre Mí</a></li>
                     <li><a href="#proyectos" data-es="Proyectos" data-en="Projects" data-ca="Projectes">Proyectos</a></li>
                     <li><a href="#experiencia" data-es="Experiencia" data-en="Experience" data-ca="Experiència">Experiencia</a></li>
+                    <li><a href="#cv" data-es="Currículum" data-en="Resume" data-ca="Currículum">Currículum</a></li>
                     <li><a href="#contacto" data-es="Contacto" data-en="Contact" data-ca="Contacte">Contacto</a></li>
                 </ul>
                 <div class="language-switcher">
@@ -760,14 +845,14 @@
                         <span style="display: block;">Stack Tecnológico</span>
                     </h3>
                     <div class="tech-badges">
-                        <span class="badge">React</span>
-                        <span class="badge">JavaScript</span>
+                        <span class="badge">HTML</span>
                         <span class="badge">C++</span>
                         <span class="badge">Linux</span>
                         <span class="badge">VMware</span>
                         <span class="badge">SFTP</span>
                         <span class="badge">Minecraft</span>
-                        <span class="badge">HTML/CSS</span>
+                        <span class="badge">Windows</span>
+                        <span class="badge">Redes</span>
                     </div>
                     <div class="stats">
                         <div class="stat">
@@ -831,17 +916,17 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>JavaScript</span>
-                            <span>Avanzado</span>
-                        </div>
-                        <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
                             <span>C++</span>
                             <span>Intermedio</span>
                         </div>
                         <div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span data-es="Automatización" data-en="Automation" data-ca="Automatització">Automatización</span>
+                            <span>Avanzado</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
                     </div>
                 </div>
 
@@ -906,7 +991,9 @@
             
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">🎮</div>
+                    <div class="project-image">
+                        <img src="minecraft.png" alt="Minecraft Server Administration">
+                    </div>
                     <div class="project-content">
                         <h3 class="project-title" data-es="Administración de Servidores Minecraft" data-en="Minecraft Server Administration" data-ca="Administració de Servidors Minecraft">Administración de Servidores Minecraft</h3>
                         <p class="project-description" data-es="Configuración completa de servidores Minecraft con plugins, mods, backups automáticos y gestión remota por SFTP." data-en="Complete Minecraft server configuration with plugins, mods, automatic backups and remote management via SFTP." data-ca="Configuració completa de servidors Minecraft amb plugins, mods, còpies de seguretat automàtiques i gestió remota per SFTP.">Configuración completa de servidores Minecraft con plugins, mods, backups automáticos y gestión remota por SFTP.</p>
@@ -947,7 +1034,6 @@
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">AI</span>
                         </div>
                         <div class="project-links">
@@ -1010,6 +1096,114 @@
         </div>
     </section>
 
+    <!-- Currículum -->
+    <section id="cv">
+        <div class="container">
+            <h2 class="section-title" data-es="Currículum" data-en="Resume" data-ca="Currículum">Currículum</h2>
+            <p class="section-subtitle" data-es="Descarga mi CV en tu idioma preferido" data-en="Download my CV in your preferred language" data-ca="Descarrega el meu CV en el teu idioma preferit">Descarga mi CV en tu idioma preferido</p>
+            
+            <div class="cv-container">
+                <!-- Sección Información Personal -->
+                <div class="cv-section">
+                    <h3 data-es="Información Personal" data-en="Personal Information" data-ca="Informació Personal">Información Personal</h3>
+                    <div class="cv-item">
+                        <div class="cv-item-title">Iván Gutierrez Romero</div>
+                        <div style="color: #b3b3b3; margin-top: 0.5rem;">
+                            <div data-es="Email: ciruelomayka@gmail.com" data-en="Email: ciruelomayka@gmail.com" data-ca="Email: ciruelomayka@gmail.com">Email: ciruelomayka@gmail.com</div>
+                            <div data-es="Teléfono: +34 635 074 516" data-en="Phone: +34 635 074 516" data-ca="Telèfon: +34 635 074 516">Teléfono: +34 635 074 516</div>
+                            <div data-es="Ubicación: Caldes de Montbui, Barcelona, España" data-en="Location: Caldes de Montbui, Barcelona, Spain" data-ca="Ubicació: Caldes de Montbui, Barcelona, Espanya">Ubicación: Caldes de Montbui, Barcelona, España</div>
+                            <div data-es="Fecha de Nacimiento: 21/07/2008" data-en="Date of Birth: 21/07/2008" data-ca="Data de Naixement: 21/07/2008">Fecha de Nacimiento: 21/07/2008</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resumen -->
+                <div class="cv-section">
+                    <h3 data-es="Resumen" data-en="Summary" data-ca="Resum">Resumen</h3>
+                    <div class="cv-item-description" data-es="Tengo 17 años y estoy muy motivado para aprender y crecer en el campo de la tecnología. Me interesan especialmente áreas como la programación, la inteligencia artificial y los sistemas informáticos. Me apasiona comprender cómo funciona la tecnología, todo lo que tenga que ver con aprender de cosas con tecnología me parece interesante." data-en="I'm 17 years old and very motivated to learn and grow in the technology field. I'm especially interested in programming, artificial intelligence and computer systems. I'm passionate about understanding how technology works. Everything related to learning about technology interests me." data-ca="Tinc 17 anys i estic molt motivat per aprendre i créixer en el camp de la tecnologia. M'interessen especialment àrees com la programació, la intel·ligència artificial i els sistemes informàtics. M'apasiona comprendre com funciona la tecnologia. Tot el que tingui a veure amb aprendre coses de tecnologia em sembla interessant.">Tengo 17 años y estoy muy motivado para aprender y crecer en el campo de la tecnología. Me interesan especialmente áreas como la programación, la inteligencia artificial y los sistemas informáticos. Me apasiona comprender cómo funciona la tecnología, todo lo que tenga que ver con aprender de cosas con tecnología me parece interesante.</div>
+                </div>
+
+                <!-- Experiencia Laboral -->
+                <div class="cv-section">
+                    <h3 data-es="Experiencia Laboral" data-en="Work Experience" data-ca="Experiència Laboral">Experiencia Laboral</h3>
+                    <div class="cv-item">
+                        <div class="cv-item-title" data-es="Ayudante de Informática" data-en="IT Assistant" data-ca="Ajudant d'Informàtica">Ayudante de Informática</div>
+                        <div class="cv-item-subtitle">APP Caldes</div>
+                        <div class="cv-item-date" data-es="Febrero 2025 - Junio 2025" data-en="February 2025 - June 2025" data-ca="Febrer 2025 - Juny 2025">Febrero 2025 - Junio 2025</div>
+                        <ul class="cv-list">
+                            <li data-es="Configuración de Sistemas Operativos (instalación de Windows, drivers, actualizaciones)" data-en="Operating System Configuration (Windows installation, drivers, updates)" data-ca="Configuració de Sistemes Operatius (instal·lació de Windows, drivers, actualitzacions)">Configuración de Sistemas Operativos (instalación de Windows, drivers, actualizaciones)</li>
+                            <li data-es="Mantenimiento de Equipos Informáticos" data-en="Computer Equipment Maintenance" data-ca="Manteniment d'Equips Informàtics">Mantenimiento de Equipos Informáticos</li>
+                            <li data-es="Formateo e instalación de ordenadores" data-en="Computer Formatting and Installation" data-ca="Formatejament i instal·lació d'ordinadors">Formateo e instalación de ordenadores</li>
+                            <li data-es="Instalación y configuración de programas básicos (Office, navegadores, antivirus, etc.)" data-en="Installation and Configuration of Basic Programs (Office, browsers, antivirus, etc.)" data-ca="Instal·lació i configuració de programes bàsics (Office, navegadors, antivirus, etc.)">Instalación y configuración de programas básicos (Office, navegadores, antivirus, etc.)</li>
+                            <li data-es="Montaje y sustitución de componentes de hardware" data-en="Assembly and Replacement of Hardware Components" data-ca="Muntatge i substitució de components de maquinari">Montaje y sustitución de componentes de hardware</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Educación -->
+                <div class="cv-section">
+                    <h3 data-es="Educación" data-en="Education" data-ca="Educació">Educación</h3>
+                    <div class="cv-item">
+                        <div class="cv-item-title" data-es="Técnico en Sistemas Microinformáticos y Redes (SMX)" data-en="Technician in Microcomputer Systems and Networks (SMX)" data-ca="Tècnic en Sistemes Microinformàtics i Xarxes (SMX)">Técnico en Sistemas Microinformáticos y Redes (SMX)</div>
+                        <div class="cv-item-subtitle">La Ferreria</div>
+                        <div class="cv-item-date" data-es="Septiembre 2025 - Presente" data-en="September 2025 - Present" data-ca="Setembre 2025 - Actualment">Septiembre 2025 - Presente</div>
+                        <div class="cv-item-description" data-es="Grado Medio en Sistemas Microinformáticos y Redes - En curso" data-en="Higher Diploma in Microcomputer Systems and Networks - In progress" data-ca="Grau Mitjà en Sistemes Microinformàtics i Xarxes - En curs">Grado Medio en Sistemas Microinformáticos y Redes - En curso</div>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-item-title" data-es="Ayudante de Mantenimiento de Equipos Informáticos" data-en="IT Equipment Maintenance Assistant" data-ca="Ajudant de Manteniment d'Equips Informàtics">Ayudante de Mantenimiento de Equipos Informáticos</div>
+                        <div class="cv-item-subtitle">La Ferreria</div>
+                        <div class="cv-item-date" data-es="Septiembre 2024 - Junio 2025" data-en="September 2024 - June 2025" data-ca="Setembre 2024 - Juny 2025">Septiembre 2024 - Junio 2025</div>
+                        <div class="cv-item-description" data-es="Programa de Formación Inicial (PFI) - Completado" data-en="Initial Training Program (PFI) - Completed" data-ca="Programa de Formació Inicial (PFI) - Completat">Programa de Formación Inicial (PFI) - Completado</div>
+                    </div>
+                </div>
+
+                <!-- Habilidades -->
+                <div class="cv-section">
+                    <h3 data-es="Habilidades" data-en="Skills" data-ca="Habilitats">Habilidades</h3>
+                    <div class="cv-item">
+                        <div class="cv-item-title" data-es="Técnicas" data-en="Technical" data-ca="Tècniques">Técnicas</div>
+                        <ul class="cv-list">
+                            <li>HTML / CSS</li>
+                            <li>C++</li>
+                            <li data-es="Administración de Servidores Linux" data-en="Linux Server Administration" data-ca="Administració de Servidors Linux">Administración de Servidores Linux</li>
+                            <li>VMware / VirtualBox</li>
+                            <li>SFTP / SSH</li>
+                            <li data-es="Configuración de Minecraft" data-en="Minecraft Configuration" data-ca="Configuració de Minecraft">Configuración de Minecraft</li>
+                            <li data-es="Redes Informáticas" data-en="Computer Networks" data-ca="Xarxes Informàtiques">Redes Informáticas</li>
+                            <li data-es="Hardware y Mantenimiento" data-en="Hardware and Maintenance" data-ca="Maquinari i Manteniment">Hardware y Mantenimiento</li>
+                        </ul>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-item-title" data-es="Personales" data-en="Personal" data-ca="Personals">Personales</div>
+                        <ul class="cv-list">
+                            <li data-es="Buena Comunicación" data-en="Good Communication" data-ca="Bona Comunicació">Buena Comunicación</li>
+                            <li data-es="Buena Adaptabilidad" data-en="Good Adaptability" data-ca="Bona Adaptabilitat">Buena Adaptabilidad</li>
+                            <li data-es="Aprendizaje Rápido" data-en="Quick Learning" data-ca="Aprenentatge Ràpid">Aprendizaje Rápido</li>
+                            <li data-es="Mucha Constancia" data-en="Great Perseverance" data-ca="Molta Constància">Mucha Constancia</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Idiomas -->
+                <div class="cv-section">
+                    <h3 data-es="Idiomas" data-en="Languages" data-ca="Idiomes">Idiomas</h3>
+                    <ul class="cv-list">
+                        <li data-es="Catalán - Nativo" data-en="Catalan - Native" data-ca="Català - Natiu">Catalán - Nativo</li>
+                        <li data-es="Español - Nativo" data-en="Spanish - Native" data-ca="Espanyol - Natiu">Español - Nativo</li>
+                        <li data-es="Inglés - Muy bueno" data-en="English - Very Good" data-ca="Anglès - Molt bo">Inglés - Muy bueno</li>
+                        <li data-es="Portugués - Básico" data-en="Portuguese - Basic" data-ca="Portuguès - Bàsic">Portugués - Básico</li>
+                    </ul>
+                </div>
+
+                <!-- Aficiones -->
+                <div class="cv-section">
+                    <h3 data-es="Aficiones" data-en="Hobbies" data-ca="Aficions">Aficiones</h3>
+                    <div class="cv-item-description" data-es="En mis tiempos libres dedico parte de mi tiempo a seguir aprendiendo y mejorando mis conocimientos en el ámbito de la tecnología. Actualmente estoy aprendiendo programación en C++, practicando con pequeños proyectos y ejercicios para comprender mejor la lógica de programación y el funcionamiento del lenguaje. Además, también me interesa la configuración y programación de servidores de Minecraft. Trabajo con herramientas como SFTP para gestionar y configurar remotamente." data-en="In my free time I dedicate part of my time to continue learning and improving my knowledge in the field of technology. I'm currently learning C++ programming, practicing with small projects and exercises to better understand programming logic and language functionality. I'm also interested in Minecraft server configuration and programming. I work with tools like SFTP to manage and configure remotely." data-ca="En els meus temps lliures dedico part del meu temps a continuar aprenent i millorant els meus coneixements en l'àmbit de la tecnologia. Actualment estic aprenent programació en C++, practicant amb petits projectes i exercicis per comprendre millor la lògica de programació i el funcionament del llenguatge. A més, també m'interessa la configuració i programació de servidors de Minecraft. Treballo amb eines com SFTP per gestionar i configurar remotament.">En mis tiempos libres dedico parte de mi tiempo a seguir aprendiendo y mejorando mis conocimientos en el ámbito de la tecnología. Actualmente estoy aprendiendo programación en C++, practicando con pequeños proyectos y ejercicios para comprender mejor la lógica de programación y el funcionamiento del lenguaje. Además, también me interesa la configuración y programación de servidores de Minecraft. Trabajo con herramientas como SFTP para gestionar y configurar remotamente.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contacto -->
     <section id="contacto">
         <div class="container">
@@ -1017,7 +1211,7 @@
             <p class="section-subtitle" data-es="¿Tienes un proyecto en mente? Hablemos" data-en="Do you have a project in mind? Let's talk" data-ca="Tens un projecte en ment? Parlem">¿Tienes un proyecto en mente? Hablemos</p>
             
             <div class="contact-container">
-                <form id="contactForm">
+                <form action="https://formspree.io/f/xyzpqwer" method="POST">
                     <div class="form-group">
                         <label for="name" data-es="Nombre" data-en="Name" data-ca="Nom">Nombre</label>
                         <input type="text" id="name" name="name" required>
@@ -1098,21 +1292,6 @@
 
         // Establecer idioma inicial
         setLanguage(activeLanguage);
-
-        // Formulario de contacto
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Aquí puedes agregar lógica para enviar el formulario
-            console.log('Formulario enviado:', { name, email, message });
-            
-            // Mostrar confirmación
-            alert(activeLanguage === 'es' ? '¡Mensaje enviado!' : activeLanguage === 'en' ? 'Message sent!' : 'Missatge enviat!');
-            this.reset();
-        });
 
         // Animaciones al scroll
         const observerOptions = {
