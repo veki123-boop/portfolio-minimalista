@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Seguridad -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- SEO -->
+    <title>Iván Gutierrez - Portfolio Minimalista</title>
+    <meta name="description" content="Portfolio personal de Iván Gutierrez. Técnico en Sistemas, Desarrollador Full Stack especializado en administración de servidores, máquinas virtuales y desarrollo web.">
+    <meta name="keywords" content="Iván Gutierrez, Portfolio, Desarrollador, Técnico Sistemas, Administración Servidores, Minecraft, Máquinas Virtuales">
+    <meta name="author" content="Iván Gutierrez Romero">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Iván Gutierrez - Portfolio Minimalista">
+    <meta property="og:description" content="Técnico en Sistemas & Desarrollador Full Stack">
+    <meta property="og:url" content="https://portfolio-minimalista.manus.space">
+    
+    <!-- Preconexiones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="canonical" href="https://portfolio-minimalista.manus.space">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+
+        /* Navegación */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 77, 77, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff 0%, #ff4d4d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        .nav-links a {
+            color: #e5e5e5;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #ff4d4d;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ff4d4d;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 0.75rem;
+            background-color: transparent;
+            border: 1px solid #ff4d4d;
+            color: #e5e5e5;
+            cursor: pointer;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background-color: #ff4d4d;
+            color: #0a0a0a;
+        }
+
+        .lang-btn:hover {
+            background-color: #ff4d4d;
+            color: #0a0a0a;
+        }
+
+        /* Secciones */
+        section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #999;
+            margin-bottom: 3rem;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            flex: 1;
+            z-index: 2;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .hero h1 .accent {
+            color: #ff4d4d;
+        }
+
+        .hero .role {
+            font-size: 1.5rem;
+            color: #999;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            color: #b3b3b3;
+            max-width: 500px;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.875rem 1.75rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: #ff4d4d;
+            color: #0a0a0a;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff6666;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 77, 77, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #e5e5e5;
+            border: 2px solid #e5e5e5;
+        }
+
+        .btn-secondary:hover {
+            border-color: #ff4d4d;
+            color: #ff4d4d;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #ff4d4d;
+            border-radius: 50%;
+            color: #ff4d4d;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #ff4d4d;
+            color: #0a0a0a;
+        }
+
+        /* Punto decorativo */
+        .decoration-dot {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background-color: #ff4d4d;
+            border-radius: 50%;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.3;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(-50%) translateX(0); }
+            50% { transform: translateY(-50%) translateX(20px); }
+        }
+
+        /* Sección About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #b3b3b3;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .tech-stack {
+            margin-top: 2rem;
+        }
+
+        .tech-stack h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .badge {
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 77, 77, 0.1);
+            border: 1px solid #ff4d4d;
+            color: #ff4d4d;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ff4d4d;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #999;
+            font-size: 0.95rem;
+        }
+
+        /* Sección Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-card {
+            background-color: rgba(255, 77, 77, 0.05);
+            border: 1px solid rgba(255, 77, 77, 0.2);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            border-color: #ff4d4d;
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .skill-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .skill-bar {
+            height: 6px;
+            background-color: rgba(255, 77, 77, 0.2);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background-color: #ff4d4d;
+            border-radius: 3px;
+            transition: width 0.6s ease;
+        }
+
+        /* Sección Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background-color: rgba(255, 77, 77, 0.05);
+            border: 1px solid rgba(255, 77, 77, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: #ff4d4d;
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background-color: rgba(255, 77, 77, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff4d4d;
+            font-size: 3rem;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .project-description {
+            color: #b3b3b3;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tag {
+            padding: 0.25rem 0.75rem;
+            background-color: rgba(255, 77, 77, 0.15);
+            color: #ff4d4d;
+            border-radius: 12px;
+            font-size: 0.85rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-links a {
+            color: #ff4d4d;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .project-links a:hover {
+            color: #ff6666;
+        }
+
+        /* Sección Experience */
+        .experience-item {
+            border-left: 3px solid #ff4d4d;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background-color: #ff4d4d;
+            border-radius: 50%;
+            border: 3px solid #0a0a0a;
+        }
+
+        .experience-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-company {
+            color: #ff4d4d;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-date {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-description {
+            color: #b3b3b3;
+            line-height: 1.6;
+        }
+
+        /* Sección Contact */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            background-color: rgba(255, 77, 77, 0.05);
+            border: 1px solid rgba(255, 77, 77, 0.2);
+            border-radius: 8px;
+            color: #e5e5e5;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ff4d4d;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 77, 77, 0.2);
+        }
+
+        .contact-link {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: rgba(255, 77, 77, 0.05);
+            border: 1px solid rgba(255, 77, 77, 0.2);
+            border-radius: 8px;
+            text-decoration: none;
+            color: #e5e5e5;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            border-color: #ff4d4d;
+            background-color: rgba(255, 77, 77, 0.1);
+        }
+
+        .contact-link-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #ff4d4d;
+        }
+
+        .contact-link-label {
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(255, 77, 77, 0.05);
+            border-top: 1px solid rgba(255, 77, 77, 0.2);
+            padding: 2rem 0;
+            text-align: center;
+            color: #999;
+            margin-top: 4rem;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: auto;
+                padding: 4rem 0;
+            }
+
+            .decoration-dot {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .projects-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">IG</a>
+                <ul class="nav-links">
+                    <li><a href="#inicio" data-es="Inicio" data-en="Home" data-ca="Inici">Inicio</a></li>
+                    <li><a href="#sobre" data-es="Sobre Mí" data-en="About" data-ca="Sobre Mi">Sobre Mí</a></li>
+                    <li><a href="#proyectos" data-es="Proyectos" data-en="Projects" data-ca="Projectes">Proyectos</a></li>
+                    <li><a href="#experiencia" data-es="Experiencia" data-en="Experience" data-ca="Experiència">Experiencia</a></li>
+                    <li><a href="#contacto" data-es="Contacto" data-en="Contact" data-ca="Contacte">Contacto</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="ca">CA</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <div class="container" style="width: 100%;">
+            <div class="hero-content">
+                <h1>Iván <span class="accent">Gutierrez</span></h1>
+                <p class="role" data-es="Técnico en Sistemas & Desarrollador" data-en="Systems Technician & Developer" data-ca="Tècnic en Sistemes & Desenvolupador">Técnico en Sistemas & Desarrollador</p>
+                <p class="description" data-es="Apasionado por la tecnología, administración de sistemas y desarrollo. Especializado en configuración de servidores, máquinas virtuales y soluciones web innovadoras." data-en="Passionate about technology, systems administration and development. Specialized in server configuration, virtual machines and innovative web solutions." data-ca="Apasionat per la tecnologia, administració de sistemes i desenvolupament. Especialitzat en configuració de servidors, màquines virtuals i solucions web innovadores.">Apasionado por la tecnología, administración de sistemas y desarrollo. Especializado en configuración de servidores, máquinas virtuales y soluciones web innovadoras.</p>
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn btn-primary" data-es="Ver Proyectos →" data-en="View Projects →" data-ca="Veure Projectes →">Ver Proyectos →</a>
+                    <a href="#contacto" class="btn btn-secondary" data-es="Contacto" data-en="Contact" data-ca="Contacte">Contacto</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/veki123-boop" target="_blank" rel="noopener noreferrer" title="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="mailto:ciruelomayka@gmail.com" title="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+                    </a>
+                    <a href="tel:+34635074516" title="Teléfono">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="decoration-dot"></div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="sobre">
+        <div class="container">
+            <h2 class="section-title" data-es="Sobre Mí" data-en="About Me" data-ca="Sobre Mi">Sobre Mí</h2>
+            <p class="section-subtitle" data-es="Técnico motivado con pasión por la tecnología" data-en="Motivated technician with passion for technology" data-ca="Tècnic motivat amb passió per la tecnologia">Técnico motivado con pasión por la tecnología</p>
+            
+            <div class="about-grid">
+                <div class="about-text">
+                    <p data-es="Tengo 17 años y estoy muy motivado para aprender y crecer en el campo de la tecnología. Me interesan especialmente áreas como la programación, la inteligencia artificial y los sistemas informáticos." data-en="I'm 17 years old and very motivated to learn and grow in the technology field. I'm especially interested in programming, artificial intelligence and computer systems." data-ca="Tinc 17 anys i estic molt motivat per aprendre i créixer en el camp de la tecnologia. M'interessen especialment àrees com la programació, la intel·ligència artificial i els sistemes informàtics.">Tengo 17 años y estoy muy motivado para aprender y crecer en el campo de la tecnología. Me interesan especialmente áreas como la programación, la inteligencia artificial y los sistemas informáticos.</p>
+                    <p data-es="Me apasiona comprender cómo funciona la tecnología. Todo lo que tenga que ver con aprender de cosas con tecnología me parece interesante. Actualmente estoy cursando el Grado Medio en Sistemas Microinformáticos y Redes." data-en="I'm passionate about understanding how technology works. Everything related to learning about technology interests me. I'm currently studying the Higher Diploma in Microcomputer Systems and Networks." data-ca="M'apasiona comprendre com funciona la tecnologia. Tot el que tingui a veure amb aprendre coses de tecnologia em sembla interessant. Actualment estic cursant el Grau Mitjà en Sistemes Microinformàtics i Xarxes.">Me apasiona comprender cómo funciona la tecnología. Todo lo que tenga que ver con aprender de cosas con tecnología me parece interesante. Actualmente estoy cursando el Grado Medio en Sistemas Microinformáticos y Redes.</p>
+                </div>
+                <div>
+                    <h3 class="tech-stack" style="margin-top: 0;" data-es="Stack Tecnológico" data-en="Tech Stack" data-ca="Stack Tecnològic">
+                        <span style="display: block;">Stack Tecnológico</span>
+                    </h3>
+                    <div class="tech-badges">
+                        <span class="badge">React</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">C++</span>
+                        <span class="badge">Linux</span>
+                        <span class="badge">VMware</span>
+                        <span class="badge">SFTP</span>
+                        <span class="badge">Minecraft</span>
+                        <span class="badge">HTML/CSS</span>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label" data-es="Proyectos" data-en="Projects" data-ca="Projectes">Proyectos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">1</div>
+                            <div class="stat-label" data-es="En Desarrollo" data-en="In Development" data-ca="En Desenvolupament">En Desarrollo</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">17</div>
+                            <div class="stat-label" data-es="Años" data-en="Years" data-ca="Anys">Años</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" style="background-color: rgba(255, 77, 77, 0.02);">
+        <div class="container">
+            <h2 class="section-title" data-es="Habilidades" data-en="Skills" data-ca="Habilitats">Habilidades</h2>
+            <p class="section-subtitle" data-es="Tecnologías y herramientas que domino" data-en="Technologies and tools I master" data-ca="Tecnologies i eines que domino">Tecnologías y herramientas que domino</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3 data-es="Administración" data-en="Administration" data-ca="Administració">Administración</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Servidores Linux</span>
+                            <span>Experto</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>VMware/VirtualBox</span>
+                            <span>Avanzado</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>SFTP/SSH</span>
+                            <span>Experto</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 100%;"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3 data-es="Desarrollo" data-en="Development" data-ca="Desenvolupament">Desarrollo</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>HTML/CSS</span>
+                            <span>Experto</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>JavaScript</span>
+                            <span>Avanzado</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>C++</span>
+                            <span>Intermedio</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3 data-es="Sistemas" data-en="Systems" data-ca="Sistemes">Sistemas</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Windows/Linux</span>
+                            <span>Experto</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Redes</span>
+                            <span>Avanzado</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Hardware</span>
+                            <span>Experto</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 100%;"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3 data-es="Personales" data-en="Personal" data-ca="Personals">Personales</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Comunicación</span>
+                            <span>Experto</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Adaptabilidad</span>
+                            <span>Experto</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Aprendizaje Rápido</span>
+                            <span>Experto</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 100%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos">
+        <div class="container">
+            <h2 class="section-title" data-es="Proyectos" data-en="Projects" data-ca="Projectes">Proyectos</h2>
+            <p class="section-subtitle" data-es="Mis trabajos más recientes y relevantes" data-en="My most recent and relevant work" data-ca="Els meus treballs més recents i rellevants">Mis trabajos más recientes y relevantes</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🎮</div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-es="Administración de Servidores Minecraft" data-en="Minecraft Server Administration" data-ca="Administració de Servidors Minecraft">Administración de Servidores Minecraft</h3>
+                        <p class="project-description" data-es="Configuración completa de servidores Minecraft con plugins, mods, backups automáticos y gestión remota por SFTP." data-en="Complete Minecraft server configuration with plugins, mods, automatic backups and remote management via SFTP." data-ca="Configuració completa de servidors Minecraft amb plugins, mods, còpies de seguretat automàtiques i gestió remota per SFTP.">Configuración completa de servidores Minecraft con plugins, mods, backups automáticos y gestión remota por SFTP.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Minecraft</span>
+                            <span class="tech-tag">SFTP</span>
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">Bash</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/veki123-boop" target="_blank">GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">💻</div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-es="Máquinas Virtuales" data-en="Virtual Machines" data-ca="Màquines Virtuals">Máquinas Virtuales</h3>
+                        <p class="project-description" data-es="Configuración y administración de máquinas virtuales con VMware y VirtualBox. Instalación de sistemas operativos y optimización de recursos." data-en="Configuration and management of virtual machines with VMware and VirtualBox. Operating system installation and resource optimization." data-ca="Configuració i administració de màquines virtuals amb VMware i VirtualBox. Instal·lació de sistemes operatius i optimització de recursos.">Configuración y administración de máquinas virtuales con VMware y VirtualBox. Instalación de sistemas operativos y optimización de recursos.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">VMware</span>
+                            <span class="tech-tag">VirtualBox</span>
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">Windows</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/veki123-boop" target="_blank">GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🌐</div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-es="Creador de Páginas Web con IA" data-en="AI Web Page Creator" data-ca="Creador de Pàgines Web amb IA">Creador de Páginas Web con IA</h3>
+                        <p class="project-description" data-es="Desarrollo de páginas web utilizando inteligencia artificial. Diseño responsive y optimización para SEO." data-en="Web page development using artificial intelligence. Responsive design and SEO optimization." data-ca="Desenvolupament de pàgines web utilitzant intel·ligència artificial. Disseny responsive i optimització per a SEO.">Desarrollo de páginas web utilizando inteligencia artificial. Diseño responsive y optimización para SEO.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">AI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/veki123-boop" target="_blank">GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">⚙️</div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-es="Scripts C++" data-en="C++ Scripts" data-ca="Scripts C++">Scripts C++</h3>
+                        <p class="project-description" data-es="Desarrollo de scripts y herramientas en C++ para automatización y detección de problemas en sistemas." data-en="Development of scripts and tools in C++ for automation and problem detection in systems." data-ca="Desenvolupament de scripts i eines en C++ per a automatització i detecció de problemes en sistemes.">Desarrollo de scripts y herramientas en C++ para automatización y detección de problemas en sistemas.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Automatización</span>
+                            <span class="tech-tag">Linux</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/veki123-boop" target="_blank">GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experiencia" style="background-color: rgba(255, 77, 77, 0.02);">
+        <div class="container">
+            <h2 class="section-title" data-es="Experiencia" data-en="Experience" data-ca="Experiència">Experiencia</h2>
+            <p class="section-subtitle" data-es="Mi trayectoria profesional y educación" data-en="My professional and educational journey" data-ca="La meva trajectòria professional i educació">Mi trayectoria profesional y educación</p>
+            
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 2rem; color: #ffffff;" data-es="Experiencia Laboral" data-en="Work Experience" data-ca="Experiència Laboral">Experiencia Laboral</h3>
+                
+                <div class="experience-item">
+                    <div class="experience-title" data-es="Ayudante de Informática" data-en="IT Assistant" data-ca="Ajudant d'Informàtica">Ayudante de Informática</div>
+                    <div class="experience-company">APP Caldes</div>
+                    <div class="experience-date">Febrero 2025 - Junio 2025</div>
+                    <div class="experience-description" data-es="Configuración de sistemas operativos, mantenimiento de equipos informáticos, formateo e instalación de ordenadores, instalación y configuración de programas básicos, montaje y sustitución de componentes de hardware." data-en="Operating system configuration, computer equipment maintenance, computer formatting and installation, installation and configuration of basic programs, assembly and replacement of hardware components." data-ca="Configuració de sistemes operatius, manteniment d'equips informàtics, formatejament i instal·lació d'ordinadors, instal·lació i configuració de programes bàsics, muntatge i substitució de components de maquinari.">Configuración de sistemas operativos, mantenimiento de equipos informáticos, formateo e instalación de ordenadores, instalación y configuración de programas básicos, montaje y sustitución de componentes de hardware.</div>
+                </div>
+
+                <h3 style="font-size: 1.3rem; margin: 3rem 0 2rem 0; color: #ffffff;" data-es="Educación" data-en="Education" data-ca="Educació">Educación</h3>
+
+                <div class="experience-item">
+                    <div class="experience-title" data-es="Técnico en Sistemas Microinformáticos y Redes (SMX)" data-en="Technician in Microcomputer Systems and Networks (SMX)" data-ca="Tècnic en Sistemes Microinformàtics i Xarxes (SMX)">Técnico en Sistemas Microinformáticos y Redes (SMX)</div>
+                    <div class="experience-company">La Ferreria</div>
+                    <div class="experience-date">Septiembre 2025 - Presente</div>
+                    <div class="experience-description" data-es="Grado Medio en Sistemas Microinformáticos y Redes - En curso" data-en="Higher Diploma in Microcomputer Systems and Networks - In progress" data-ca="Grau Mitjà en Sistemes Microinformàtics i Xarxes - En curs">Grado Medio en Sistemas Microinformáticos y Redes - En curso</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title" data-es="Ayudante de Mantenimiento de Equipos Informáticos" data-en="IT Equipment Maintenance Assistant" data-ca="Ajudant de Manteniment d'Equips Informàtics">Ayudante de Mantenimiento de Equipos Informáticos</div>
+                    <div class="experience-company">La Ferreria</div>
+                    <div class="experience-date">Septiembre 2024 - Junio 2025</div>
+                    <div class="experience-description" data-es="Programa de Formación Inicial (PFI) - Completado" data-en="Initial Training Program (PFI) - Completed" data-ca="Programa de Formació Inicial (PFI) - Completat">Programa de Formación Inicial (PFI) - Completado</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <div class="container">
+            <h2 class="section-title" data-es="Contacto" data-en="Contact" data-ca="Contacte">Contacto</h2>
+            <p class="section-subtitle" data-es="¿Tienes un proyecto en mente? Hablemos" data-en="Do you have a project in mind? Let's talk" data-ca="Tens un projecte en ment? Parlem">¿Tienes un proyecto en mente? Hablemos</p>
+            
+            <div class="contact-container">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name" data-es="Nombre" data-en="Name" data-ca="Nom">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-es="Email" data-en="Email" data-ca="Email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-es="Mensaje" data-en="Message" data-ca="Missatge">Mensaje</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;" data-es="Enviar Mensaje" data-en="Send Message" data-ca="Enviar Missatge">Enviar Mensaje</button>
+                </form>
+
+                <div class="contact-links">
+                    <a href="mailto:ciruelomayka@gmail.com" class="contact-link">
+                        <div class="contact-link-icon">✉️</div>
+                        <div class="contact-link-label">Email</div>
+                        <div style="font-size: 0.85rem; color: #ff4d4d;">ciruelomayka@gmail.com</div>
+                    </a>
+                    <a href="https://github.com/veki123-boop" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <div class="contact-link-icon">🐙</div>
+                        <div class="contact-link-label">GitHub</div>
+                        <div style="font-size: 0.85rem; color: #ff4d4d;">veki123-boop</div>
+                    </a>
+                    <a href="tel:+34635074516" class="contact-link">
+                        <div class="contact-link-icon">📱</div>
+                        <div class="contact-link-label" data-es="Teléfono" data-en="Phone" data-ca="Telèfon">Teléfono</div>
+                        <div style="font-size: 0.85rem; color: #ff4d4d;">+34 635 074 516</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p data-es="© 2026 Iván Gutierrez. Todos los derechos reservados." data-en="© 2026 Iván Gutierrez. All rights reserved." data-ca="© 2026 Iván Gutierrez. Tots els drets reservats.">© 2026 Iván Gutierrez. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Sistema de idiomas
+        const currentLanguage = localStorage.getItem('language') || 'es';
+        let activeLanguage = currentLanguage;
+
+        function setLanguage(lang) {
+            activeLanguage = lang;
+            localStorage.setItem('language', lang);
+            
+            // Actualizar botones
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Actualizar contenido
+            document.querySelectorAll('[data-es]').forEach(element => {
+                const text = element.dataset[lang];
+                if (text) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = text;
+                    } else {
+                        element.textContent = text;
+                    }
+                }
+            });
+        }
+
+        // Inicializar idioma
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+        });
+
+        // Establecer idioma inicial
+        setLanguage(activeLanguage);
+
+        // Formulario de contacto
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Aquí puedes agregar lógica para enviar el formulario
+            console.log('Formulario enviado:', { name, email, message });
+            
+            // Mostrar confirmación
+            alert(activeLanguage === 'es' ? '¡Mensaje enviado!' : activeLanguage === 'en' ? 'Message sent!' : 'Missatge enviat!');
+            this.reset();
+        });
+
+        // Animaciones al scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scroll para links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
