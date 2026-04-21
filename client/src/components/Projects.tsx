@@ -28,12 +28,14 @@ export default function Projects() {
               <Card key={project.id} hover className="overflow-hidden">
                 {/* Project Image */}
                 {project.image && (
-                  <div className="w-full h-48 bg-muted mb-6 rounded-lg overflow-hidden">
+                  <div className="w-full h-48 bg-muted mb-6 rounded-lg overflow-hidden relative group">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
                     />
+                    {/* Overlay glow effect */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-accent/0 via-accent/0 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
                   </div>
                 )}
 

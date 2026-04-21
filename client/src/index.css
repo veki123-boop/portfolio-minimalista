@@ -342,3 +342,70 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-red-accent);
 }
+
+/* ============================================
+   ENHANCED HOVER & AESTHETIC EFFECTS
+   ============================================ */
+
+/* Project Card Image Overlay */
+.project-image-overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-accent/0 via-accent/0 to-accent/5 opacity-0 transition-opacity duration-300 rounded-lg;
+}
+
+.project-image-overlay:hover {
+  @apply opacity-100;
+}
+
+/* Smooth image zoom on hover */
+.project-image {
+  @apply transition-transform duration-500 ease-out;
+}
+
+.project-image:hover {
+  @apply scale-110;
+}
+
+/* Card glow effect */
+@keyframes card-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 77, 0);
+  }
+  50% {
+    box-shadow: 0 0 15px 0 rgba(255, 77, 77, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 77, 0);
+  }
+}
+
+/* Subtle pulse on hover */
+.card-hover-pulse:hover {
+  animation: card-glow 0.6s ease-out;
+}
+
+/* Link hover enhancement */
+a {
+  @apply transition-colors duration-200;
+}
+
+a:hover {
+  @apply text-accent;
+}
+
+/* Badge hover effect */
+.badge {
+  @apply transition-all duration-200;
+}
+
+.badge:hover {
+  @apply scale-105;
+}
+
+/* Section fade-in on scroll */
+.section-fade {
+  @apply opacity-0 translate-y-4 transition-all duration-700 ease-out;
+}
+
+.section-fade.visible {
+  @apply opacity-100 translate-y-0;
+}
