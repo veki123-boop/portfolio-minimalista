@@ -73,7 +73,7 @@ export const projects: Project[] = [
       "Web page development using artificial intelligence to optimize design and functionality. Automatic HTML content generation.",
     descriptionCa:
       "Desenvolupament de pàgines web usant intel·ligència artificial per optimitzar disseny i funcionalitat. Generació automàtica de contingut HTML.",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663441507986/KLXEcGa9PiyhytsRCs8ZDJ/web-ai-generated-8RMdxjyc9v5ZkjcmtzwmXs.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663441507986/KLXEcGa9PiyhytsRCs8ZDJ/web-ai-isometric-QP9GVsGk8htAajTJLGMYhx.webp",
     technologies: ["HTML", "CSS", "JavaScript", "AI"],
     links: {
       github: "https://github.com/veki123-boop",
@@ -92,7 +92,7 @@ export const projects: Project[] = [
       "Development of scripts and tools in C++ for element detection and action automation. Efficient and optimized programs.",
     descriptionCa:
       "Desenvolupament de scripts i eines en C++ per a detecció d'elements i automatització d'accions. Programes eficients i optimitzats.",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663441507986/KLXEcGa9PiyhytsRCs8ZDJ/cpp-scripts-generated-aHwBch9NarftprTVZdCuBW.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663441507986/KLXEcGa9PiyhytsRCs8ZDJ/cpp-scripts-isometric-C3rdbzKqojxCvJc4XR329P.webp",
     technologies: ["C++", "Programación", "Automatización"],
     links: {
       github: "https://github.com/veki123-boop",
