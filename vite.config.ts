@@ -199,6 +199,7 @@ function vitePluginManusDebugCollector(): Plugin {
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginStorageProxy(), vitePluginManusDebugCollector()];
 
 export default defineConfig({
+  base: '/portfolio-minimalista/',
   plugins,
   resolve: {
     alias: {
