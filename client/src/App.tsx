@@ -26,7 +26,9 @@ function App() {
         <ThemeProvider defaultTheme="dark">
           <TooltipProvider>
             <Toaster />
-            <Router />
+            <WouterRouter base="/portfolio-minimalista">
+              <Router />
+            </WouterRouter>
           </TooltipProvider>
         </ThemeProvider>
       </LanguageProvider>
