@@ -18,6 +18,7 @@ export interface Project {
   links: {
     github?: string;
     demo?: string;
+    youtube?: string;
   };
   featured?: boolean;
   year: number;
@@ -99,6 +100,25 @@ export const projects: Project[] = [
     },
     featured: true,
     year: 2024,
+  },
+  {
+    id: "hardware-installer",
+    titleEs: "Instalador de Hardware",
+    titleEn: "Hardware Installer",
+    titleCa: "Instal·lador de Hardware",
+    descriptionEs:
+      "Instalacion y configuracion de componentes de hardware. Montaje de equipos, diagnostico de problemas y optimizacion de rendimiento.",
+    descriptionEn:
+      "Installation and configuration of hardware components. Equipment assembly, troubleshooting and performance optimization.",
+    descriptionCa:
+      "Instal·lacio i configuracio de components de hardware. Muntatge d'equips, diagnostic de problemes i optimitzacio de rendiment.",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop",
+    technologies: ["Hardware", "Troubleshooting", "Networking"],
+    links: {
+      youtube: "https://youtu.be/me5woacqnLE",
+    },
+    featured: true,
+    year: 2025,
   },
 ];
 
