@@ -9,7 +9,7 @@ import SectionTitle from "./SectionTitle";
 import Card from "./Card";
 import Badge from "./Badge";
 import ScrollReveal from "./ScrollReveal";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, Youtube } from "lucide-react";
 
 export default function Projects() {
   return (
@@ -78,6 +78,18 @@ export default function Projects() {
                     >
                       <ExternalLink className="w-4 h-4" />
                       Demo
+                    </a>
+                  )}
+
+                  {project.links?.youtube && (
+                    <a
+                      href={project.links.youtube}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors duration-200 font-medium text-sm"
+                    >
+                      <Youtube className="w-4 h-4" />
+                      YouTube
                     </a>
                   )}
                 </div>
