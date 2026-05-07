@@ -1,14 +1,13 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
-import { useLocation } from "wouter";
+import { Route, Switch, Router } from "wouter";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Home from "@/pages/Home";
 
-function Router() {
+function AppRouter() {
   return (
     <Switch>
       <Route path={""} component={Home} />
@@ -26,9 +25,9 @@ function App() {
         <ThemeProvider defaultTheme="dark">
           <TooltipProvider>
             <Toaster />
-            <WouterRouter base="/portfolio-minimalista">
-              <Router />
-            </WouterRouter>
+            <Router base="/portfolio-minimalista">
+              <AppRouter />
+            </Router>
           </TooltipProvider>
         </ThemeProvider>
       </LanguageProvider>
