@@ -18,7 +18,6 @@ export interface Project {
   links: {
     github?: string;
     demo?: string;
-    youtube?: string;
   };
   featured?: boolean;
   year: number;
@@ -74,7 +73,7 @@ export const projects: Project[] = [
       "Web page development using artificial intelligence to optimize design and functionality. Automatic HTML content generation.",
     descriptionCa:
       "Desenvolupament de pàgines web usant intel·ligència artificial per optimitzar disseny i funcionalitat. Generació automàtica de contingut HTML.",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663441507986/KLXEcGa9PiyhytsRCs8ZDJ/web-ai-creator-isometric-gek82wXjGtcb2Rkykbb8z2.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663441507986/KLXEcGa9PiyhytsRCs8ZDJ/web-ai-isometric-QP9GVsGk8htAajTJLGMYhx.webp",
     technologies: ["HTML", "CSS", "JavaScript", "AI"],
     links: {
       github: "https://github.com/veki123-boop",
@@ -93,32 +92,13 @@ export const projects: Project[] = [
       "Development of scripts and tools in C++ for element detection and action automation. Efficient and optimized programs.",
     descriptionCa:
       "Desenvolupament de scripts i eines en C++ per a detecció d'elements i automatització d'accions. Programes eficients i optimitzats.",
-    image: "/manus-storage/cpp-scripts_80c5a2f0.png",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663441507986/KLXEcGa9PiyhytsRCs8ZDJ/cpp-scripts-isometric-C3rdbzKqojxCvJc4XR329P.webp",
     technologies: ["C++", "Programación", "Automatización"],
     links: {
       github: "https://github.com/veki123-boop",
     },
     featured: true,
     year: 2024,
-  },
-  {
-    id: "hardware-installer",
-    titleEs: "Instalador de Hardware",
-    titleEn: "Hardware Installer",
-    titleCa: "Instal·lador de Hardware",
-    descriptionEs:
-      "Instalación y configuración de componentes de hardware. Montaje de equipos, diagnóstico de problemas y optimización de rendimiento.",
-    descriptionEn:
-      "Installation and configuration of hardware components. Equipment assembly, troubleshooting and performance optimization.",
-    descriptionCa:
-      "Instal·lació i configuració de components de hardware. Muntatge d'equips, diagnòstic de problemes i optimització de rendiment.",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop",
-    technologies: ["Hardware", "Troubleshooting", "Networking"],
-    links: {
-      youtube: "https://youtu.be/me5woacqnLE",
-    },
-    featured: true,
-    year: 2025,
   },
 ];
 
