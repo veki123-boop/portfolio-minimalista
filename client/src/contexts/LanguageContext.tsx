@@ -38,7 +38,7 @@ const translations: Record<Language, Record<string, any>> = {
     about: {
       titulo: "Sobre Mí",
       subtitulo: "Técnico motivado con pasión por la tecnología",
-      descripcion1: "Tengo 17 años y estoy muy motivado para aprender y crecer en el campo de la tecnología. Me interesan especialmente áreas como la programación, la inteligencia artificial y los sistemas informáticos.",
+      descripcion1: "Tengo 18 años y estoy muy motivado para aprender y crecer en el campo de la tecnología. Me interesan especialmente áreas como la programación, la inteligencia artificial y los sistemas informáticos.",
       descripcion2: "Me apasiona comprender cómo funciona la tecnología. Todo lo que tenga que ver con aprender de cosas con tecnología me parece interesante. Actualmente estoy cursando el Grado Medio en Sistemas Microinformáticos y Redes.",
       descripcion3: "En mis tiempos libres dedico parte de mi tiempo a seguir aprendiendo y mejorando mis conocimientos en el ámbito de la tecnología.",
       stackTecnico: "Stack Tecnológico",
@@ -93,7 +93,7 @@ const translations: Record<Language, Record<string, any>> = {
     about: {
       titulo: "About Me",
       subtitulo: "Motivated technician with a passion for technology",
-      descripcion1: "I'm 17 years old and very motivated to learn and grow in the technology field. I'm especially interested in programming, artificial intelligence and computer systems.",
+      descripcion1: "I'm 18 years old and very motivated to learn and grow in the technology field. I'm especially interested in programming, artificial intelligence and computer systems.",
       descripcion2: "I'm passionate about understanding how technology works. Anything related to learning about technology interests me. I'm currently studying the Degree in Microcomputer Systems and Networks.",
       descripcion3: "In my free time, I dedicate part of my time to continue learning and improving my knowledge in the field of technology.",
       stackTecnico: "Technology Stack",
@@ -148,7 +148,7 @@ const translations: Record<Language, Record<string, any>> = {
     about: {
       titulo: "Sobre Mi",
       subtitulo: "Tècnic motivat amb passió per la tecnologia",
-      descripcion1: "Tinc 17 anys i estic molt motivat per aprendre i créixer en el camp de la tecnologia. M'interessen especialment àrees com la programació, la intel·ligència artificial i els sistemes informàtics.",
+      descripcion1: "Tinc 18 anys i estic molt motivat per aprendre i créixer en el camp de la tecnologia. M'interessen especialment àrees com la programació, la intel·ligència artificial i els sistemes informàtics.",
       descripcion2: "M'appassiona entendre com funciona la tecnologia. Tot allò relacionat amb aprendre sobre tecnologia m'interessa. Actualment estic cursant el Grau Mitjà en Sistemes Microinformàtics i Xarxes.",
       descripcion3: "En els meus temps lliures dedico part del meu temps a continuar aprenent i millorant els meus coneixements en l'àmbit de la tecnologia.",
       stackTecnico: "Stack Tecnològic",
