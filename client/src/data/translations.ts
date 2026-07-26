@@ -27,7 +27,7 @@ const translations = {
       titulo: "Sobre Mí",
       subtitulo: "Técnico motivado con pasión por la tecnología",
       descripcion1:
-        "Tengo 17 años y estoy muy motivado para aprender y crecer en el campo de la tecnología. Me interesan especialmente áreas como la programación, la inteligencia artificial y los sistemas informáticos.",
+        "Tengo 18 años y estoy muy motivado para aprender y crecer en el campo de la tecnología. Me interesan especialmente áreas como la programación, la inteligencia artificial y los sistemas informáticos.",
       descripcion2:
         "Me apasiona comprender cómo funciona la tecnología. Todo lo que tenga que ver con aprender de cosas con tecnología me parece interesante. Actualmente estoy cursando el Grado Medio en Sistemas Microinformáticos y Redes.",
       descripcion3:
@@ -103,7 +103,7 @@ const translations = {
       titulo: "About Me",
       subtitulo: "Motivated technician with passion for technology",
       descripcion1:
-        "I'm 17 years old and highly motivated to learn and grow in the technology field. I'm especially interested in areas such as programming, artificial intelligence and computer systems.",
+        "I'm 18 years old and highly motivated to learn and grow in the technology field. I'm especially interested in areas such as programming, artificial intelligence and computer systems.",
       descripcion2:
         "I'm passionate about understanding how technology works. Everything related to learning about technology interests me. I'm currently studying the Degree in Microcomputer Systems and Networks.",
       descripcion3:
@@ -179,7 +179,7 @@ const translations = {
       titulo: "Sobre Mi",
       subtitulo: "Tècnic motivat amb passió per la tecnologia",
       descripcion1:
-        "Tinc 17 anys i estic molt motivat per aprendre i créixer en el camp de la tecnologia. M'interessen especialment àrees com la programació, la intel·ligència artificial i els sistemes informàtics.",
+        "Tinc 18 anys i estic molt motivat per aprendre i créixer en el camp de la tecnologia. M'interessen especialment àrees com la programació, la intel·ligència artificial i els sistemes informàtics.",
       descripcion2:
         "M'appassiona comprendre com funciona la tecnologia. Tot allò relacionat amb aprendre sobre tecnologia m'interessa. Actualment estic cursant el Grau Mitjà en Sistemes Microinformàtics i Xarxes.",
       descripcion3:

@@ -18,6 +18,7 @@ export interface Project {
   links: {
     github?: string;
     demo?: string;
+    youtube?: string;
   };
   featured?: boolean;
   year: number;
@@ -92,13 +93,32 @@ export const projects: Project[] = [
       "Development of scripts and tools in C++ for element detection and action automation. Efficient and optimized programs.",
     descriptionCa:
       "Desenvolupament de scripts i eines en C++ per a detecció d'elements i automatització d'accions. Programes eficients i optimitzats.",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663441507986/KLXEcGa9PiyhytsRCs8ZDJ/cpp-scripts-isometric-C3rdbzKqojxCvJc4XR329P.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663441507986/KLXEcGa9PiyhytsRCs8ZDJ/icon-cpp-scripts-TJutAWUic54RQbh4DKDwB3.webp",
     technologies: ["C++", "Programación", "Automatización"],
     links: {
       github: "https://github.com/veki123-boop",
     },
     featured: true,
     year: 2024,
+  },
+  {
+    id: "hardware-installer",
+    titleEs: "Instalador de Hardware",
+    titleEn: "Hardware Installer",
+    titleCa: "Instal·lador de Hardware",
+    descriptionEs:
+      "Instalacion y configuracion de componentes de hardware. Montaje de equipos, diagnostico de problemas y optimizacion de rendimiento.",
+    descriptionEn:
+      "Installation and configuration of hardware components. Equipment assembly, troubleshooting and performance optimization.",
+    descriptionCa:
+      "Instal·lacio i configuracio de components de hardware. Muntatge d'equips, diagnostic de problemes i optimitzacio de rendiment.",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663441507986/KLXEcGa9PiyhytsRCs8ZDJ/icon-hardware-h9SaJjDb82G25fnq9ejE5z.webp",
+    technologies: ["Hardware", "Troubleshooting", "Networking"],
+    links: {
+      youtube: "https://youtu.be/me5woacqnLE",
+    },
+    featured: true,
+    year: 2025,
   },
 ];
 
