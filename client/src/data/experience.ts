@@ -33,11 +33,11 @@ export const experience: ExperienceItem[] = [
     companyEn: "La Ferreria",
     companyCa: "La Ferreria",
     descriptionEs:
-      "Estudiando Grado Medio en Sistemas Microinformáticos y Redes. Aprendiendo administración de sistemas, redes, virtualización y soporte técnico.",
+      "Primer curso completado y actualmente cursando segundo de Sistemas Microinformáticos y Redes. Aprendiendo administración de sistemas, redes, virtualización y soporte técnico.",
     descriptionEn:
-      "Studying Degree in Microcomputer Systems and Networks. Learning systems administration, networking, virtualization and technical support.",
+      "First year completed and currently studying the second year of the Degree in Microcomputer Systems and Networks. Learning systems administration, networking, virtualization and technical support.",
     descriptionCa:
-      "Estudiant de Grau Mitjà en Sistemes Microinformàtics i Xarxes. Aprenent administració de sistemes, xarxes, virtualització i suport tècnic.",
+      "Primer curs completat i actualment cursant segon de Sistemes Microinformàtics i Xarxes. Aprenent administració de sistemes, xarxes, virtualització i suport tècnic.",
     startDate: "Sep 2025",
     endDate: "Jun 2027",
     location: "Caldes de Montbui",

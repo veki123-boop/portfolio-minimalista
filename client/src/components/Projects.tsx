@@ -24,14 +24,14 @@ export default function Projects() {
 
         <ScrollReveal delay={100}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {projects.filter(p => p.featured).map((project: any) => (
+            {projects.filter(p => p.featured).map((project) => (
               <Card key={project.id} hover className="overflow-hidden">
                 {/* Project Image */}
                 {project.image && (
                   <div className="w-full h-48 bg-muted mb-6 rounded-lg overflow-hidden relative group">
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={project.titleEs}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
                     />
                     {/* Overlay glow effect */}

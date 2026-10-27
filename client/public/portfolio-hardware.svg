@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="background" x1="120" y1="60" x2="1050" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#211436"/>
+      <stop offset="1" stop-color="#0B0912"/>
+    </linearGradient>
+    <linearGradient id="case" x1="592" y1="153" x2="943" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3C2A5D"/>
+      <stop offset="1" stop-color="#191323"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="630" y1="185" x2="875" y2="629" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B99AFF" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#7C4DCC" stop-opacity=".04"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#E2DCFF"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+  <path fill="url(#background)" d="M0 0h1200v800H0z"/>
+  <circle cx="765" cy="396" r="248" fill="#8B5CF6" opacity=".14" filter="url(#shadow)"/>
+  <path d="M0 649h1200v151H0z" fill="#100D18"/>
+  <path d="m85 650 337-124h451l243 124H85Z" fill="#191323" stroke="#38284E" stroke-width="2"/>
+  <path d="m145 650 285-99h408l193 99H145Z" fill="#241A34"/>
+  <rect x="270" y="601" width="267" height="12" rx="6" fill="#A78BFA" opacity=".3"/>
+  <rect x="594" y="601" width="180" height="12" rx="6" fill="#A78BFA" opacity=".18"/>
+  <path d="M601 151h332a24 24 0 0 1 24 24v473H577V175a24 24 0 0 1 24-24Z" fill="url(#case)" stroke="#9E7AD3" stroke-width="3"/>
+  <path d="M614 180h228v433H614z" fill="url(#glass)" stroke="#BDA4E9" stroke-opacity=".62" stroke-width="2"/>
+  <path d="M847 180h86v433h-86z" fill="#17121F" stroke="#6B4E91" stroke-width="2"/>
+  <circle cx="889" cy="247" r="28" stroke="#A78BFA" stroke-width="6" opacity=".85"/>
+  <circle cx="889" cy="247" r="10" fill="#A78BFA"/>
+  <circle cx="889" cy="357" r="28" stroke="#A78BFA" stroke-width="6" opacity=".62"/>
+  <circle cx="889" cy="357" r="10" fill="#A78BFA"/>
+  <circle cx="889" cy="467" r="28" stroke="#A78BFA" stroke-width="6" opacity=".42"/>
+  <circle cx="889" cy="467" r="10" fill="#A78BFA"/>
+  <rect x="636" y="204" width="132" height="238" rx="10" fill="#211A2D" stroke="#8F70B9" stroke-width="2"/>
+  <rect x="666" y="240" width="72" height="72" rx="8" fill="#382653" stroke="#C4B5FD" stroke-width="3"/>
+  <path d="M680 254h44v44h-44z" fill="#A78BFA" opacity=".24"/>
+  <path d="M687 263h30v26h-30z" fill="url(#glow)"/>
+  <path d="M702 250v-15m0 88v-15m-38-22h-15m91 0h-15m-52-28-11-11m64 64-11-11m0-42 11-11m-64 64 11-11" stroke="#C4B5FD" stroke-width="3" stroke-linecap="round"/>
+  <rect x="654" y="339" width="96" height="12" rx="6" fill="#A78BFA" opacity=".72"/>
+  <rect x="654" y="365" width="70" height="8" rx="4" fill="#C4B5FD" opacity=".45"/>
+  <rect x="654" y="385" width="83" height="8" rx="4" fill="#C4B5FD" opacity=".3"/>
+  <path d="M779 228h40v5h-40zm0 18h40v5h-40zm0 18h28v5h-28zm0 120h40v5h-40zm0 18h30v5h-30z" fill="#C4B5FD" opacity=".45"/>
+  <path d="M638 478h184v94H638z" fill="#211A2D" stroke="#8F70B9" stroke-width="2"/>
+  <path d="M655 550v-26l22-22 22 22v26m17 0v-42l22-22 22 22v42m17 0v-20l18-18 18 18v20" stroke="#A78BFA" stroke-width="4" stroke-linejoin="round" opacity=".8"/>
+  <rect x="662" y="583" width="142" height="8" rx="4" fill="#A78BFA" opacity=".42"/>
+  <path d="M342 433c0-57 46-103 103-103h46c55 0 99 44 99 99v74H342v-70Z" fill="#342445" stroke="#A78BFA" stroke-width="3"/>
+  <path d="M389 395c0-38 31-69 69-69s69 31 69 69v24H389v-24Z" fill="#17121F" stroke="#B99AFF" stroke-width="3"/>
+  <path d="M406 402c0-29 23-52 52-52s52 23 52 52v14H406v-14Z" fill="#A78BFA" opacity=".27"/>
+  <path d="M351 471h191v126H351z" fill="#2B1F3E" stroke="#A78BFA" stroke-width="3"/>
+  <path d="M351 509h191v12H351z" fill="#A78BFA" opacity=".56"/>
+  <path d="m380 597 44-103 45 103" stroke="#C4B5FD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m431 489 31 29-19 18 28 31" stroke="#E2DCFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M465 587h42" stroke="#A78BFA" stroke-width="7" stroke-linecap="round"/>
+  <path d="M298 616h94m115 0h62m145-4h52" stroke="#A78BFA" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+  <circle cx="1051" cy="174" r="4" fill="#C4B5FD"/>
+  <circle cx="1080" cy="200" r="3" fill="#A78BFA"/>
+  <circle cx="166" cy="218" r="4" fill="#A78BFA"/>
+  <path d="M976 290h86m-43-43v86M190 276h56m-28-28v56" stroke="#A78BFA" stroke-width="2" opacity=".45"/>
+  <text x="96" y="104" fill="#E2DCFF" font-family="Arial, sans-serif" font-size="24" letter-spacing="5">HARDWARE / SERVICE</text>
+  <text x="96" y="145" fill="#A78BFA" font-family="Arial, sans-serif" font-size="16" letter-spacing="3">ASSEMBLY · DIAGNOSTICS · SUPPORT</text>
+</svg>

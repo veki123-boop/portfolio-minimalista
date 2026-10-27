@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="background" x1="126" y1="46" x2="1077" y2="774" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#211436"/>
+      <stop offset="1" stop-color="#0B0912"/>
+    </linearGradient>
+    <linearGradient id="window" x1="290" y1="174" x2="912" y2="626" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#30223F"/>
+      <stop offset="1" stop-color="#17121F"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#D3C7FF"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+  </defs>
+  <path fill="url(#background)" d="M0 0h1200v800H0z"/>
+  <circle cx="610" cy="390" r="275" fill="#8B5CF6" opacity=".16" filter="url(#shadow)"/>
+  <path d="M0 694h1200v106H0z" fill="#100D18"/>
+  <path d="m127 694 284-72h378l285 72H127Z" fill="#1B1525" stroke="#3B2A51" stroke-width="2"/>
+  <rect x="233" y="151" width="682" height="485" rx="22" fill="url(#window)" stroke="#A78BFA" stroke-width="3"/>
+  <path d="M233 173a22 22 0 0 1 22-22h638a22 22 0 0 1 22 22v52H233v-52Z" fill="#3A2B4D"/>
+  <circle cx="268" cy="188" r="7" fill="#E2DCFF"/>
+  <circle cx="294" cy="188" r="7" fill="#C4B5FD"/>
+  <circle cx="320" cy="188" r="7" fill="#A78BFA"/>
+  <rect x="279" y="270" width="53" height="318" rx="9" fill="#211A2D"/>
+  <path d="M301 297v245m0-229h14m-14 40h14m-14 40h14m-14 40h14m-14 40h14m-14 40h14" stroke="#A78BFA" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+  <text x="364" y="297" fill="#C4B5FD" font-family="Consolas, monospace" font-size="22">#include &lt;iostream&gt;</text>
+  <text x="364" y="342" fill="#E2DCFF" font-family="Consolas, monospace" font-size="22">int main() {</text>
+  <text x="398" y="387" fill="#C4B5FD" font-family="Consolas, monospace" font-size="21">  std::vector&lt;int&gt; tasks;</text>
+  <text x="398" y="432" fill="#C4B5FD" font-family="Consolas, monospace" font-size="21">  for (const auto&amp; task : tasks) {</text>
+  <text x="432" y="477" fill="#E2DCFF" font-family="Consolas, monospace" font-size="21">    process(task);</text>
+  <text x="398" y="522" fill="#C4B5FD" font-family="Consolas, monospace" font-size="21">  }</text>
+  <text x="364" y="567" fill="#E2DCFF" font-family="Consolas, monospace" font-size="21">}</text>
+  <path d="M762 280h100m-100 31h73m-73 31h91" stroke="#A78BFA" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+  <rect x="759" y="380" width="117" height="124" rx="13" fill="#211A2D" stroke="#8F70B9" stroke-width="2"/>
+  <path d="M783 411h69m-69 26h44m-44 26h58" stroke="#C4B5FD" stroke-width="5" stroke-linecap="round"/>
+  <path d="m787 550 17 17 34-38" stroke="#A78BFA" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M617 638v25m-87 0h174" stroke="#8F70B9" stroke-width="8" stroke-linecap="round"/>
+  <rect x="970" y="282" width="122" height="122" rx="24" transform="rotate(45 970 282)" fill="#30223F" stroke="#A78BFA" stroke-width="3"/>
+  <text x="932" y="370" fill="url(#chip)" font-family="Consolas, monospace" font-size="46" font-weight="700">&lt;/&gt;</text>
+  <rect x="1004" y="472" width="71" height="71" rx="12" fill="#211A2D" stroke="#8F70B9" stroke-width="2"/>
+  <path d="m1024 507 12 12 20-23" stroke="#C4B5FD" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1075 231h38m-19-19v38M158 330h38m-19-19v38" stroke="#A78BFA" stroke-width="3" opacity=".6"/>
+  <circle cx="1046" cy="178" r="4" fill="#C4B5FD"/>
+  <circle cx="189" cy="456" r="4" fill="#A78BFA"/>
+  <text x="93" y="104" fill="#E2DCFF" font-family="Arial, sans-serif" font-size="24" letter-spacing="5">C++ / AUTOMATION</text>
+  <text x="93" y="145" fill="#A78BFA" font-family="Arial, sans-serif" font-size="16" letter-spacing="3">TOOLS · LOGIC · PERFORMANCE</text>
+</svg>

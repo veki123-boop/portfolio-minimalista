@@ -31,7 +31,7 @@ export default function Button({
 
   const variantStyles = {
     primary:
-      "bg-accent text-accent-foreground hover:bg-red-600 hover:shadow-lg hover:shadow-accent/20 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed",
+      "bg-accent text-accent-foreground hover:bg-accent/80 hover:shadow-lg hover:shadow-accent/20 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed",
     secondary:
       "bg-card text-foreground border border-muted hover:bg-secondary active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed",
   };

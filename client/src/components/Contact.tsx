@@ -103,7 +103,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-accent text-background font-semibold rounded-lg hover:bg-red-600 transition-colors duration-200"
+                className="w-full px-6 py-3 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-accent/80 transition-colors duration-200"
               >
                 Enviar Mensaje
               </button>

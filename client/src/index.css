@@ -47,14 +47,14 @@
      Design Philosophy: Minimalismo Contemporáneo
      - Fondo negro profundo (#0a0a0a)
      - Tipografía Geist con jerarquía fuerte
-     - Acento rojo (#ff4d4d) estratégico
+     - Acento morado (#a78bfa) estratégico
      - Espacio negativo intencional
   */
 
-  /* Primary Colors - Red Accent */
-  --primary: #ff4d4d;
+  /* Primary Colors - Purple Accent */
+  --primary: #a78bfa;
   --primary-foreground: #0a0a0a;
-  --sidebar-primary: #ff4d4d;
+  --sidebar-primary: #a78bfa;
   --sidebar-primary-foreground: #0a0a0a;
 
   /* Dark Theme Base */
@@ -71,33 +71,33 @@
   --muted: #333333;
   --muted-foreground: #a0a0a0;
 
-  /* Accent - Rojo suave */
-  --accent: #ff4d4d;
+  /* Accent - Morado suave */
+  --accent: #a78bfa;
   --accent-foreground: #0a0a0a;
 
   /* Destructive */
-  --destructive: #ff4d4d;
+  --destructive: #a78bfa;
   --destructive-foreground: #0a0a0a;
 
   /* Border & Input */
   --border: #333333;
   --input: #1a1a1a;
-  --ring: #ff4d4d;
+  --ring: #a78bfa;
 
   /* Sidebar */
   --sidebar: #0a0a0a;
   --sidebar-foreground: #f5f5f5;
-  --sidebar-accent: #ff4d4d;
+  --sidebar-accent: #a78bfa;
   --sidebar-accent-foreground: #0a0a0a;
   --sidebar-border: #333333;
-  --sidebar-ring: #ff4d4d;
+  --sidebar-ring: #a78bfa;
 
   /* Charts */
-  --chart-1: #ff4d4d;
-  --chart-2: #ff6b6b;
-  --chart-3: #ff8888;
-  --chart-4: #ffa5a5;
-  --chart-5: #ffc2c2;
+  --chart-1: #a78bfa;
+  --chart-2: #b69cff;
+  --chart-3: #c4b5fd;
+  --chart-4: #d3c7ff;
+  --chart-5: #e2dcff;
 
   /* Border Radius */
   --radius: 0.5rem;
@@ -106,8 +106,8 @@
   --color-dark-bg: #0a0a0a;
   --color-dark-secondary: #1a1a1a;
   --color-dark-tertiary: #2a2a2a;
-  --color-red-accent: #ff4d4d;
-  --color-red-light: #ff6b6b;
+  --color-purple-accent: #a78bfa;
+  --color-purple-light: #c4b5fd;
   --color-text-primary: #f5f5f5;
   --color-text-secondary: #a0a0a0;
   --color-border-subtle: #333333;
@@ -223,12 +223,12 @@ html {
     @apply py-20 md:py-32 lg:py-40;
   }
 
-  /* Red Accent Utilities */
-  .accent-red {
+  /* Purple Accent Utilities */
+  .accent-purple {
     @apply text-accent;
   }
 
-  .accent-red-bg {
+  .accent-purple-bg {
     @apply bg-accent text-accent-foreground;
   }
 
@@ -257,7 +257,7 @@ html {
 
   /* Gradient Text */
   .gradient-text {
-    background: linear-gradient(135deg, var(--color-text-primary) 0%, var(--color-red-accent) 100%);
+    background: linear-gradient(135deg, var(--color-text-primary) 0%, var(--color-purple-accent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -294,12 +294,12 @@ html {
   }
 }
 
-@keyframes pulse-red {
+@keyframes pulse-purple {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7);
+    box-shadow: 0 0 0 0 rgba(167, 139, 250, 0.7);
   }
   50% {
-    box-shadow: 0 0 0 10px rgba(255, 77, 77, 0);
+    box-shadow: 0 0 0 10px rgba(167, 139, 250, 0);
   }
 }
 
@@ -311,8 +311,8 @@ html {
   animation: fadeIn 0.4s ease-out;
 }
 
-.animate-pulse-red {
-  animation: pulse-red 2s infinite;
+.animate-pulse-purple {
+  animation: pulse-purple 2s infinite;
 }
 
 /* Scroll Behavior */
@@ -322,7 +322,7 @@ html {
 
 /* Selection Color */
 ::selection {
-  background-color: var(--color-red-accent);
+  background-color: var(--color-purple-accent);
   color: var(--color-dark-bg);
 }
 
@@ -340,7 +340,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-red-accent);
+  background: var(--color-purple-accent);
 }
 
 /* ============================================
@@ -368,13 +368,13 @@ html {
 /* Card glow effect */
 @keyframes card-glow {
   0% {
-    box-shadow: 0 0 0 0 rgba(255, 77, 77, 0);
+    box-shadow: 0 0 0 0 rgba(167, 139, 250, 0);
   }
   50% {
-    box-shadow: 0 0 15px 0 rgba(255, 77, 77, 0.1);
+    box-shadow: 0 0 15px 0 rgba(167, 139, 250, 0.1);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(255, 77, 77, 0);
+    box-shadow: 0 0 0 0 rgba(167, 139, 250, 0);
   }
 }
 

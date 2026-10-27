@@ -24,6 +24,8 @@ export interface Project {
   year: number;
 }
 
+const assetBase = import.meta.env.BASE_URL;
+
 export const projects: Project[] = [
   {
     id: "minecraft-servers",
@@ -93,7 +95,7 @@ export const projects: Project[] = [
       "Development of scripts and tools in C++ for element detection and action automation. Efficient and optimized programs.",
     descriptionCa:
       "Desenvolupament de scripts i eines en C++ per a detecció d'elements i automatització d'accions. Programes eficients i optimitzats.",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663441507986/KLXEcGa9PiyhytsRCs8ZDJ/icon-cpp-scripts-TJutAWUic54RQbh4DKDwB3.webp",
+    image: `${assetBase}portfolio-cpp.svg`,
     technologies: ["C++", "Programación", "Automatización"],
     links: {
       github: "https://github.com/veki123-boop",
@@ -112,7 +114,7 @@ export const projects: Project[] = [
       "Installation and configuration of hardware components. Equipment assembly, troubleshooting and performance optimization.",
     descriptionCa:
       "Instal·lacio i configuracio de components de hardware. Muntatge d'equips, diagnostic de problemes i optimitzacio de rendiment.",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663441507986/KLXEcGa9PiyhytsRCs8ZDJ/icon-hardware-h9SaJjDb82G25fnq9ejE5z.webp",
+    image: `${assetBase}portfolio-hardware.svg`,
     technologies: ["Hardware", "Troubleshooting", "Networking"],
     links: {
       youtube: "https://youtu.be/me5woacqnLE",

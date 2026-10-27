@@ -38,7 +38,8 @@ export default function Experience() {
       school: "La Ferreria",
       startDate: "Septiembre 2025",
       endDate: "Presente",
-      status: "En curso",
+      status: "2.º curso en curso",
+      description: "Primer curso completado. Actualmente cursando segundo.",
     },
   ];
 
@@ -112,10 +113,15 @@ export default function Experience() {
                       <p className="text-sm text-muted-foreground">
                         {item.startDate} - {item.endDate}
                       </p>
+                      {"description" in item && (
+                        <p className="text-muted-foreground mt-3">
+                          {item.description}
+                        </p>
+                      )}
                     </div>
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap ${
-                        item.status === "Completado"
+                        item.status === "Completado" || item.status.startsWith("2.º")
                           ? "bg-accent/20 text-accent"
                           : "bg-muted text-muted-foreground"
                       }`}
