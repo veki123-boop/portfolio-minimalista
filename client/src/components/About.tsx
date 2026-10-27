@@ -10,11 +10,6 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function About() {
   const techStack = [
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Tailwind CSS",
-    "Node.js",
     "C++",
     "VMware",
     "Linux",
@@ -35,7 +30,7 @@ export default function About() {
             {/* Descripción */}
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Tengo 17 años y estoy muy motivado para aprender y crecer en el campo de la tecnología. Me interesan especialmente áreas como la programación, la inteligencia artificial y los sistemas informáticos.
+                Tengo 18 años y estoy muy motivado para aprender y crecer en el campo de la tecnología. Me interesan especialmente áreas como la programación, la inteligencia artificial y los sistemas informáticos.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -72,7 +67,7 @@ export default function About() {
                 </div>
 
                 <div>
-                  <p className="text-4xl font-bold text-accent mb-2">17</p>
+                  <p className="text-4xl font-bold text-accent mb-2">18</p>
                   <p className="text-muted-foreground">Años</p>
                 </div>
               </div>

@@ -38,7 +38,7 @@ export const projects: Project[] = [
       "Complete Minecraft server configuration with plugins, mods, automatic backups and remote management via SFTP.",
     descriptionCa:
       "Configuració completa de servidors Minecraft amb plugins, mods, còpies de seguretat automàtiques i gestió remota per SFTP.",
-    image: "https://images.unsplash.com/photo-1538481143235-5d630a3663d4?w=600&h=400&fit=crop",
+    image: `${assetBase}projects/minecraft.png`,
     technologies: ["Minecraft", "SFTP", "Linux", "Bash"],
     links: {
       github: "https://github.com/veki123-boop",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
       "Configuration and management of virtual machines using VMware and VirtualBox. Operating system installation and optimization.",
     descriptionCa:
       "Configuració i administració de màquines virtuals usant VMware i VirtualBox. Instal·lació de sistemes operatius i optimització.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+    image: `${assetBase}projects/vms.png`,
     technologies: ["VMware", "VirtualBox", "Linux", "Windows"],
     links: {
       github: "https://github.com/veki123-boop",
@@ -76,7 +76,7 @@ export const projects: Project[] = [
       "Web page development using artificial intelligence to optimize design and functionality. Automatic HTML content generation.",
     descriptionCa:
       "Desenvolupament de pàgines web usant intel·ligència artificial per optimitzar disseny i funcionalitat. Generació automàtica de contingut HTML.",
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663441507986/KLXEcGa9PiyhytsRCs8ZDJ/web-ai-isometric-QP9GVsGk8htAajTJLGMYhx.webp",
+    image: `${assetBase}projects/web-ai.png`,
     technologies: ["HTML", "CSS", "JavaScript", "AI"],
     links: {
       github: "https://github.com/veki123-boop",
@@ -95,7 +95,7 @@ export const projects: Project[] = [
       "Development of scripts and tools in C++ for element detection and action automation. Efficient and optimized programs.",
     descriptionCa:
       "Desenvolupament de scripts i eines en C++ per a detecció d'elements i automatització d'accions. Programes eficients i optimitzats.",
-    image: `${assetBase}portfolio-cpp.svg`,
+    image: `${assetBase}projects/cpp-scripts.png`,
     technologies: ["C++", "Programación", "Automatización"],
     links: {
       github: "https://github.com/veki123-boop",

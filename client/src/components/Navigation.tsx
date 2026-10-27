@@ -36,13 +36,19 @@ export default function Navigation() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="text-muted-foreground hover:text-accent transition-colors duration-200 text-sm font-medium"
-            >
-              {item.label}
-            </a>
+            <div key={item.label} className="flex items-center gap-3">
+              <a
+                href={item.href}
+                className="text-muted-foreground hover:text-accent transition-colors duration-200 text-sm font-medium"
+              >
+                {item.label}
+              </a>
+              {item.label === "Inicio" && (
+                <span className="rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-accent">
+                  Disponible
+                </span>
+              )}
+            </div>
           ))}
           <div className="border-l border-muted pl-8">
             <LanguageSwitcher />
@@ -68,14 +74,20 @@ export default function Navigation() {
         <div className="md:hidden border-t border-muted bg-background">
           <div className="container py-4 space-y-4">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="block text-muted-foreground hover:text-accent transition-colors duration-200 font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.label}
-              </a>
+              <div key={item.label} className="flex items-center gap-3">
+                <a
+                  href={item.href}
+                  className="block text-muted-foreground hover:text-accent transition-colors duration-200 font-medium"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </a>
+                {item.label === "Inicio" && (
+                  <span className="rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-accent">
+                    Disponible
+                  </span>
+                )}
+              </div>
             ))}
             <div className="pt-4 border-t border-muted">
               <LanguageSwitcher />

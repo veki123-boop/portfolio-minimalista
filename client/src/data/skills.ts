@@ -21,10 +21,6 @@ export const skillsData: SkillCategory[] = [
     id: "frontend",
     category: "Frontend",
     skills: [
-      { name: "React", level: "expert" },
-      { name: "TypeScript", level: "expert" },
-      { name: "Next.js", level: "advanced" },
-      { name: "Tailwind CSS", level: "expert" },
       { name: "Vue.js", level: "intermediate" },
       { name: "HTML/CSS", level: "expert" },
     ],
@@ -33,7 +29,6 @@ export const skillsData: SkillCategory[] = [
     id: "backend",
     category: "Backend",
     skills: [
-      { name: "Node.js", level: "advanced" },
       { name: "Express", level: "advanced" },
       { name: "Python", level: "intermediate" },
       { name: "PostgreSQL", level: "advanced" },
